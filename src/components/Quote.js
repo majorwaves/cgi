@@ -54,7 +54,7 @@ const Text = styled.div`
 
 `;
 
-const Quote = ({}) => (
+const Quote = (props) => (
   <Wrapper>
     <Text>
       <h3>Investment Focus</h3>
