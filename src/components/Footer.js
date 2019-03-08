@@ -39,10 +39,11 @@ const Footer = (props) => (
     </Location>
     <Location>
       <h4>New York</h4>
-      <p>1271 Avenue of the Americas 43rd Floor</p>
-      <p>New York, New oYOrk 10020</p>
+      <p>800 3rd Avenue</p>
+      <p>New York, New York 10022</p>
       <br/>
-      <p>T: 212-292-3719</p>
+      <p>T: 212-220-4047</p>
+      <p>F: 786-523-0590</p>
     </Location>
     <Location>
       <h4>Chicago</h4>
@@ -50,6 +51,7 @@ const Footer = (props) => (
       <p>Chicago, Illinois, 60035</p>
       <br/>
       <p>T: 312-925-6537</p>
+      <p>F: 786-523-0590</p>
     </Location>
     <Map>
       <img src={map} alt='map' />

@@ -1,13 +1,14 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 import Button from './Button'
+import { Link } from 'react-router-dom'
 
 const Block = styled.div`
 
 `;
 
 const Image = styled.div`
-  height: 20vw;
+  height: 30vw;
   overflow: hidden;
   transition: 0.2s all ease-in-out;
 
@@ -40,13 +41,13 @@ const Info = styled.div`
   }
 `;
 
-const Asset = ({title, city, image}) => (
+const Asset = ({title, city, image, url}) => (
   <Block>
     <Image><img src={image} alt={title} /></Image>
     <Info>
       <h3>{city}</h3>
       <h2>{title}</h2>
-      <Button>Learn More</Button>
+      <Link to={url}><Button>Learn More</Button></Link>
     </Info>
   </Block>
 );

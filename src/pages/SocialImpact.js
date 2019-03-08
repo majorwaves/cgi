@@ -38,7 +38,7 @@ const SocialImpact = (props) => (
     <Section>
       <div>
         <h1>Supporting Communities</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ullamcorper ultricies tortor, non laoreet arcu mattis at. Nulla eu justo sed neque convallis fermentum nec in turpis. Cras iaculis massa tellus, eget cursus nunc vulputate sit amet. Curabitur sed velit id nulla vehicula vestibulum. Nulla hendrerit lorem velit, sit amet malesuada arcu commodo eget. Vivamus ac lorem interdum, finibus ipsum in, cursus quam. Etiam eu rutrum orci.</p>
+        <p>Since 2006, CGI has committed capital and resources to philanthropic initiatives. By supporting programs that help solve crucial social and environmental issues in emerging markets, we commit ourselves to taking philanthropic action based on discipline, innovation and a strategic approach over the long term. </p>
       </div>
       <ReactPlayer
         playing

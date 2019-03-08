@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import PageHeader from '../components/PageHeader'
-import city from '../images/city.jpg'
+import people from '../images/people.jpg'
 import Quote from '../components/Quote'
 
 const Wrapper = styled.div`
@@ -30,7 +30,7 @@ const Section = styled.section`
 const Market = (props) => (
   <Wrapper>
     <PageHeader
-      image={city}
+      image={people}
       title='Market'
       text='Lorem ipsum dolor sit amet'
     />

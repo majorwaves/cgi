@@ -33,8 +33,8 @@ const Person = styled.div`
 
 const TeamMember = ({ name, title, image }) => (
   <Person>
-    <div className='pic'>
-
+    <div className='image'>
+      <img src={image} alt={title} />
     </div>
     <div>
       <h5>{name}</h5>

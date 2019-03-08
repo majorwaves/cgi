@@ -5,7 +5,9 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import TheFirm from './pages/TheFirm'
+import Fund from './pages/Fund'
 import Market from './pages/Market'
+import SMA from './pages/SMA'
 import Team from './pages/Team'
 import SocialImpact from './pages/SocialImpact'
 
@@ -34,6 +36,8 @@ class App extends Component {
             <Route exact path='/' component={Home} />
             <Route path='/the-firm' component={TheFirm} />
             <Route path='/market' component={Market} />
+            <Route path='/fund' component={Fund} />
+            <Route path='/sma' component={SMA} />
             <Route path='/social-impact' component={SocialImpact} />
             <Route path='/team' component={Team} />
           </Switch>

@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import Button from './Button'
 import PropTypes from 'prop-types'
 import ReactPlayer from 'react-player'
-import video from '../images/city.mp4'
 
 const Wrapper = styled.section`
   position: relative;
@@ -28,10 +27,11 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 2;
 
   button {
-    border: 2px solid white;
-    color: white;
+    border: ${props => props.gradient ? '2px solid black' : '2px solid white' };
+    color: ${props => props.gradient ? 'black' : 'white' };
     transition: 0.15s all ease-in-out;
 
     &:hover {
@@ -42,33 +42,48 @@ const Content = styled.div`
 `;
 
 const Title = styled.h1`
-  color: white;
+  color: ${props => props.gradient ? 'black' : 'white' };
   font-size: 64px;
   font-family: ${props => props.theme.type.heading};
   font-weight: 100;
   margin: 0 0 2rem 0;
 `;
 
-const Sub = styled.h2`
-  color: white;
-  font-weight: 200;
-  font-size: 48px;
-  width: 40vw;
-  margin-top: 0;
+const Image = styled.div`
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+    z-index: 1;
+  }
 `;
 
-const Hero = ({ image, title, subtitle, buttonText }) => (
+const Hero = ({ video, image, title, subtitle, buttonText, gradient }) => (
   <Wrapper>
-    <ReactPlayer
-      playing
-      muted
-      loop
-      className='hero_video'
-      url={video}
-    />
-    <Content>
-      <Title>{title}</Title>
-      <Sub>{subtitle}</Sub>
+    {video &&
+        <ReactPlayer
+          playing
+          muted
+          loop
+          className='hero_video'
+          url={video}
+        />
+    }
+    {image &&
+      <Image><img alt={title} src={image} /></Image>
+    }
+    <Content gradient={gradient}>
+      <Title gradient={gradient}>{title}</Title>
       <p><Button>{buttonText}</Button></p>
     </Content>
   </Wrapper>
@@ -76,7 +91,10 @@ const Hero = ({ image, title, subtitle, buttonText }) => (
 
 Hero.propTypes = {
   title: PropTypes.string.isRequired,
-  buttonText: PropTypes.string.isRequired
+  buttonText: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  video: PropTypes.string,
+  gradient: PropTypes.bool
 }
 
 export default Hero;

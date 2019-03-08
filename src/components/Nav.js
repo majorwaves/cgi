@@ -4,6 +4,7 @@ import Search from './Search'
 import { NavLink } from 'react-router-dom'
 import Modal from 'react-modal'
 import ContactForm from './ContactForm'
+import SubNav from './SubNav';
 
 const customStyles = {
   content : {
@@ -19,26 +20,33 @@ const customStyles = {
 const Menu = styled.nav`
   color: ${props => props.theme.color.medium};
   box-sizing: border-box;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: '. search' 'navOne navTwo';
+  display: flex;
+  align-self: flex-end;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
 
-  ul {
+  .nav {
     padding: 0;
     margin: 0;
     list-style: none;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    grid-area: navTwo;
 
     li {
       text-transform: uppercase;
       font-family: ${props => props.theme.type.sans};
-      margin-right: 2rem;
+      margin-right: 4rem;
       font-weight: 500;
       font-size: 14px;
-      line-height: 11px;
+      position: relative;
+      padding-bottom: 2.5rem;
+
+      &:hover {
+        .subnav {
+          display: block;
+        }
+      }
 
       &.link {
         cursor: pointer;
@@ -57,7 +65,7 @@ const Menu = styled.nav`
 
           &:after {
             position: absolute;
-            bottom: -21px;
+            bottom: -40px;
             content: "";
             height: 6px;
             width: 100%;
@@ -72,13 +80,12 @@ const Menu = styled.nav`
       }
 
       &:last-of-type {
-        margin: 0;
+        margin-right: 0;
       }
     }
 
     &.main {
       justify-content: flex-start;
-      grid-area: navOne;
 
       li {
         font-weight: 800;
@@ -110,17 +117,17 @@ class Nav extends Component {
 
     return (
       <Menu>
-        <ul className='main'>
+        <ul className='nav main'>
           <li><NavLink to='/the-firm'>The Firm</NavLink></li>
-          <li>Platform</li>
+          <li>
+            Platforms
+            <SubNav />
+          </li>
           <li><NavLink to='/team'>Team</NavLink></li>
-        </ul>
-        <ul>
           <li><NavLink to='/market'>Market</NavLink></li>
           <li><NavLink to='/social-impact'>Social Impact</NavLink></li>
-          <li class='link' onClick={this.handleOpenModal}>Contact</li>
+          <li className='link' onClick={this.handleOpenModal}>Contact</li>
         </ul>
-        <Search />
         <Modal isOpen={this.state.modalOpen} onRequestClose={this.handleOpenModal} contentLabel='Contact' style={customStyles}>
           <ContactForm />
         </Modal>

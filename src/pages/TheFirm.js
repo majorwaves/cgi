@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import PageHeader from '../components/PageHeader'
-import miami from '../images/miami.jpg'
+import image from '../images/skyline.jpg'
 import video from '../images/city.mp4'
 import ReactPlayer from 'react-player'
 import Quote from '../components/Quote'
@@ -31,9 +31,9 @@ const Section = styled.section`
 const TheFirm = (props) => (
   <Wrapper>
     <PageHeader
-      image={miami}
+      image={image}
       title='The Firm'
-      text='Here is a blurb about CGI'
+      text=' Investment Management with Experience and Ingenuity'
     />
     <Section>
       <div>
@@ -50,12 +50,12 @@ const TheFirm = (props) => (
     </Section>
     <Section>
       <div>
-        <h1>Securing Futures</h1>
-        <p>CGI Merchant Group (CGI) is a private-equity, alternative investment management firm that capitalizes on commercial real estate and infrastructure opportunities by using an entrepreneurial approach to build stakeholder value. Within the past six months, the firm has deployed more than $150 million of capital in multiple assets classes including retail, office, and leisure. The Firm has a wealth of knowledge on capital markets – which combined with their ingenuity and experience – distinguishes them from other alternative investment managers. </p>
+        <h1>Creating Value</h1>
+        <p>At CGI, the focus is to remain nimble, execution-minded and in a position to create value where others may not. The Firm relies on strategic alliances, operating partnerships and third-party consultants to remain agile, while preserving scalability. CGI implements “best-industry practices” and engage in “hands-on” asset management techniques to ensure all investment portfolios and its inherent risks are managed in an optimal manner.</p>
       </div>
       <div>
-        <h1>Global</h1>
-        <p>CGI Merchant Group (CGI) is a private-equity, alternative investment management firm that capitalizes on commercial real estate and infrastructure opportunities by using an entrepreneurial approach to build stakeholder value. Within the past six months, the firm has deployed more than $150 million of capital in multiple assets classes including retail, office, and leisure. The Firm has a wealth of knowledge on capital markets – which combined with their ingenuity and experience – distinguishes them from other alternative investment managers. </p>
+        <h1>Mission</h1>
+        <p>CGI Merchant Group is a private equity, alternative investment firm that capitalizes on commercial real estate and infrastructure. The firm’s nimble team, deep industry knowledge, and international network is positioned to create unique real estate opportunities that produce superior returns for stakeholders. Through this work, CGI Merchant Group has built a distinct culture; based upon contrarian views and an entrepreneurial approach to achieve exceptional long-term value for every client and community serve</p>
       </div>
     </Section>
     <Quote />

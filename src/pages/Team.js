@@ -2,12 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import PageHeader from '../components/PageHeader'
 import TeamMember from '../components/TeamMember'
-import people from '../images/people.jpg'
 import one from '../images/team-1.png'
 import two from '../images/team-2.png'
 import three from '../images/team-3.png'
 
 const Wrapper = styled.div`
+  border-top: 1px solid rgba(0,0,0,0.12);
 `;
 
 const Grid = styled.div`
@@ -27,11 +27,6 @@ const Divider = styled.span`
 
 const Team = (props) => (
   <Wrapper>
-    <PageHeader
-      image={people}
-      title='Team'
-      text='Lorem ipsum dolor sit amet'
-    />
     <Grid>
       <TeamMember
         image={one}
@@ -51,7 +46,7 @@ const Team = (props) => (
       />
       <TeamMember
         image={three}
-        name='Scott Hislop'
+        name='Rodolfo Slaibi'
       />
     </Grid>
   </Wrapper>

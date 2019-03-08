@@ -5,11 +5,12 @@ import bg from '../images/quote.jpg';
 
 const Wrapper = styled.div`
   color: white;
-  height: 60vh;
+  height: 70vh;
   background: url(${bg});
   background-size: cover;
   background-attachment: fixed;
   position: relative;
+  min-height: 600px;
 
   button {
     border: 2px solid white;
