@@ -1,5 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 const Wrapper = styled.button`
   padding: 1rem 2rem;
@@ -9,8 +10,8 @@ const Wrapper = styled.button`
   font-family: ${props => props.theme.type.body};
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  background: ${props => props.primary ? props.theme.color.dark : 'transparent' };
-  color: ${props => props.primary ? 'white' : props.theme.color.light };
+  background: ${props => props.primary ? 'white' : 'transparent' };
+  color: ${props => props.primary ? props.theme.color.medium : 'white' };
   border: ${props => props.primary ? `2px solid ${props.theme.color.dark}` : `2px solid ${props.theme.color.light}` };
   cursor: pointer;
   transition: 0.2s all ease-in-out;
@@ -25,5 +26,10 @@ const Button = ({ primary, children}) => (
     {children}
   </Wrapper>
 );
+
+Button.propTypes = {
+  primary: PropTypes.bool,
+  children: PropTypes.node.isRequired
+}
 
 export default Button;

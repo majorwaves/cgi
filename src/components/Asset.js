@@ -30,26 +30,16 @@ const Info = styled.div`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
 
   button {
-    border-color: white;
-    color: white;
+    border: 0;
 
     &:hover {
       background: white;
       color: ${props => props.theme.color.medium};
       transition: 0.15s all ease-in-out;
     }
-  }
-
-  h3 {
-    color: white;
-    font-weight: 500;
-    letter-spacing: 0.3rem;
-    text-transform: uppercase;
-    font-size: 24px;
-    font-family: ${props => props.theme.type.body};
   }
 
   h2 {
@@ -64,9 +54,8 @@ const Asset = ({title, city, image, url}) => (
   <Block>
     <Image><img src={image} alt={title} /></Image>
     <Info>
-      <h3>{city}</h3>
       <h2>{title}</h2>
-      <Link to={url}><Button ghost light>Learn More</Button></Link>
+      <Link to={url}><Button primary>Learn More</Button></Link>
     </Info>
   </Block>
 );
