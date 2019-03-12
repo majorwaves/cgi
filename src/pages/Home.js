@@ -11,9 +11,6 @@ const Main = styled.main`
 `;
 
 const Assets = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 2.5vw;
   background: ${props => props.theme.color.bg};
   padding: 3rem 2.5vw;
 `;

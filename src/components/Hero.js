@@ -7,7 +7,7 @@ import ReactPlayer from 'react-player'
 const Wrapper = styled.section`
   position: relative;
   background: black;
-  height: 50vh;
+  height: 60vh;
   overflow: hidden;
 
   video {
@@ -24,7 +24,7 @@ const Content = styled.div`
   left: 10vw;
   width: 80vw;
   box-sizing: border-box;
-  height: 50vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

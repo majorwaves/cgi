@@ -4,13 +4,25 @@ import Button from './Button'
 import { Link } from 'react-router-dom'
 
 const Block = styled.div`
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: "image text";
+  margin-bottom: 8rem;
 
+  &:nth-of-type(even){
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "text image";
+  }
 `;
 
 const Image = styled.div`
-  height: 30vw;
+  height: 50vw;
   overflow: hidden;
   transition: 0.2s all ease-in-out;
+  grid-area: image;
+  position: relative;
+  z-index: 2;
+  box-shadow: 7px 7px 20px 0px rgba(50, 50, 50, 0.2);
 
   img {
     width: 100%;
@@ -20,23 +32,27 @@ const Image = styled.div`
 `;
 
 const Info = styled.div`
-  background: white;
-  padding: 1rem 2rem 2rem;
+  padding: 2rem 2rem 2rem;
   text-align: center;
+  grid-area: text;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   h3 {
     color: ${props => props.theme.color.lightGrey};
     font-weight: 500;
     letter-spacing: 0.3rem;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 24px;
     font-family: ${props => props.theme.type.body};
   }
 
   h2 {
     font-family: ${props => props.theme.type.heading};
     font-weight: normal;
-    font-size: 36px;
+    font-size: 48px;
     color: ${props => props.theme.color.dark};
   }
 `;
