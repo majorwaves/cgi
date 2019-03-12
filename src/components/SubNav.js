@@ -7,7 +7,9 @@ const Wrapper = styled.div`
   z-index: 10;
   display: none;
   top: 59px;
+  width: 100%;
   transform: translate(-180px, 0);
+  box-sizing: border-box;
 `;
 
 const Caret = styled.div`
@@ -19,7 +21,7 @@ const Caret = styled.div`
   border-style: solid;
   border-color: transparent transparent ${props => props.theme.color.dark};
   top: -20px;
-  left: calc(50% - 10px);
+  left: 200px;
   z-index: 1;
 `;
 

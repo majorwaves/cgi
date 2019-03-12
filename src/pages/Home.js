@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import Hero from '../components/Hero'
 import Asset from '../components/Asset'
-import city from '../images/fund.jpg'
-import highrise from '../images/sma.jpg'
-import video from '../images/city.mp4'
+import fund from '../images/fund-img.jpg'
+import sma from '../images/sma-1.jpg'
+import hero from '../images/hero.jpg'
 
 const Main = styled.main`
 
@@ -25,19 +25,19 @@ class Home extends Component {
             <Hero
               title='CGI Merchant Group is a private-equity, alternative investment management firm.'
               buttonText='Learn More'
-              video={video}
+              image={hero}
             />
             <Assets>
               <Asset
                 title='Fund I'
                 city='Miami'
-                image={highrise}
+                image={fund}
                 url='/platforms'
               />
               <Asset
                 title='SMA'
                 city='Miami'
-                image={city}
+                image={sma}
                 url='/sma'
               />
             </Assets>

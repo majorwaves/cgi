@@ -39,7 +39,10 @@ const PageHeader = ({image, title, text}) => (
     <img src={image} alt={title} />
     <Overlay>
       <h1>{title}</h1>
-      <p>{text}</p>
+      {typeof text !== 'undefined'
+        ? <p>{text}</p>
+        : null
+      }
     </Overlay>
   </Hero>
 );

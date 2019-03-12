@@ -7,7 +7,7 @@ import ReactPlayer from 'react-player'
 const Wrapper = styled.section`
   position: relative;
   background: black;
-  height: 100vh;
+  height: 50vh;
   overflow: hidden;
 
   video {
@@ -21,12 +21,14 @@ const Wrapper = styled.section`
 const Content = styled.div`
   position: absolute;
   top: 0;
-  left: 5vw;
-  width: 50vw;
-  height: 100vh;
+  left: 10vw;
+  width: 80vw;
+  box-sizing: border-box;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   z-index: 2;
 
   button {
@@ -43,28 +45,19 @@ const Content = styled.div`
 
 const Title = styled.h1`
   color: ${props => props.gradient ? 'black' : 'white' };
-  font-size: 64px;
+  font-size: 48px;
   font-family: ${props => props.theme.type.heading};
   font-weight: 100;
   margin: 0 0 2rem 0;
 `;
 
 const Image = styled.div`
+  height: 100%;
+
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-
-  &:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: '';
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-    z-index: 1;
   }
 `;
 

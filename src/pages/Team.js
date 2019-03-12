@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import PageHeader from '../components/PageHeader'
 import TeamMember from '../components/TeamMember'
+import image from '../images/bong.jpg'
 import one from '../images/team-1.png'
 import two from '../images/team-2.png'
 import three from '../images/team-3.png'
@@ -27,6 +28,10 @@ const Divider = styled.span`
 
 const Team = (props) => (
   <Wrapper>
+    <PageHeader
+      image={image}
+      title='Team'
+    />
     <Grid>
       <TeamMember
         image={one}

@@ -31,7 +31,10 @@ const Menu = styled.nav`
     list-style: none;
     display: flex;
     align-items: flex-end;
-    justify-content: flex-end;
+    justify-content: space-between;
+    position: relative;
+    width: 40vw;
+    min-width: 900px;
 
     li {
       text-transform: uppercase;
@@ -39,7 +42,6 @@ const Menu = styled.nav`
       margin-right: 4rem;
       font-weight: 500;
       font-size: 14px;
-      position: relative;
       padding-bottom: 2.5rem;
 
       &:hover {
@@ -126,7 +128,7 @@ class Nav extends Component {
           <li><NavLink to='/team'>Team</NavLink></li>
           <li><NavLink to='/market'>Market</NavLink></li>
           <li><NavLink to='/social-impact'>Social Impact</NavLink></li>
-          <li className='link' onClick={this.handleOpenModal}>Contact</li>
+          <li><NavLink to='/media'>Media</NavLink></li>
         </ul>
         <Modal isOpen={this.state.modalOpen} onRequestClose={this.handleOpenModal} contentLabel='Contact' style={customStyles}>
           <ContactForm />
