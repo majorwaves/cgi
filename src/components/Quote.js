@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from './Button';
-import bg from '../images/quote.jpg';
+import bg from '../images/quote-min.jpg';
 
 const Wrapper = styled.div`
   color: white;
