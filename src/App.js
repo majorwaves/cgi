@@ -8,6 +8,7 @@ import TheFirm from './pages/TheFirm'
 import Fund from './pages/Fund'
 import Market from './pages/Market'
 import SMA from './pages/SMA'
+import Media from './pages/Media'
 import Team from './pages/Team'
 import SocialImpact from './pages/SocialImpact'
 
@@ -38,6 +39,7 @@ class App extends Component {
             <Route path='/market' component={Market} />
             <Route path='/fund' component={Fund} />
             <Route path='/sma' component={SMA} />
+            <Route path='/media' component={Media} />
             <Route path='/social-impact' component={SocialImpact} />
             <Route path='/team' component={Team} />
           </Switch>

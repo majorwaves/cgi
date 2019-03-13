@@ -7,28 +7,36 @@ import ReactPlayer from 'react-player'
 const Wrapper = styled.section`
   position: relative;
   background: black;
-  height: 50vh;
+  height: 60vh;
   overflow: hidden;
+  background: url(${props => props.bg});
+  background-attachment: fixed;
+  background-position: bottom center;
+  background-size: cover;
 
-  video {
-    width: 100vw !important;
-    height: 100vh !important;
-    object-fit: cover;
-    opacity: 0.7;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: ${props => props.theme.color.light};
+    z-index: 1;
+    mix-blend-mode: multiply;
   }
 `;
 
 const Content = styled.div`
   position: absolute;
   top: 0;
-  left: 10vw;
-  width: 80vw;
+  left: 5vw;
+  width: 50vw;
   box-sizing: border-box;
-  height: 50vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
   z-index: 2;
 
   button {
@@ -45,7 +53,7 @@ const Content = styled.div`
 
 const Title = styled.h1`
   color: ${props => props.gradient ? 'black' : 'white' };
-  font-size: 48px;
+  font-size: 56px;
   font-family: ${props => props.theme.type.heading};
   font-weight: 100;
   margin: 0 0 2rem 0;
@@ -61,32 +69,17 @@ const Image = styled.div`
   }
 `;
 
-const Hero = ({ video, image, title, subtitle, buttonText, gradient }) => (
-  <Wrapper>
-    {video &&
-        <ReactPlayer
-          playing
-          muted
-          loop
-          className='hero_video'
-          url={video}
-        />
-    }
-    {image &&
-      <Image><img alt={title} src={image} /></Image>
-    }
+const Hero = ({ video, image, title, subtitle, gradient }) => (
+  <Wrapper bg={image}>
     <Content gradient={gradient}>
       <Title gradient={gradient}>{title}</Title>
-      <p><Button>{buttonText}</Button></p>
     </Content>
   </Wrapper>
 );
 
 Hero.propTypes = {
   title: PropTypes.string.isRequired,
-  buttonText: PropTypes.string.isRequired,
-  image: PropTypes.string,
-  video: PropTypes.string,
+  image: PropTypes.string.isRequired,
   gradient: PropTypes.bool
 }
 
