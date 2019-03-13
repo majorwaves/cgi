@@ -4,7 +4,7 @@ import Hero from '../components/Hero'
 import Asset from '../components/Asset'
 import fund from '../images/fund-img.jpg'
 import sma from '../images/sma-1.jpg'
-import hero from '../images/hero.jpg'
+import hero from '../images/hero_2.jpg'
 
 const Main = styled.main`
 
