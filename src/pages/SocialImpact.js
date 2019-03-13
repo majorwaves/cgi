@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import PageHeader from '../components/PageHeader'
 import school from '../images/school.jpg'
-import video from '../images/city.mp4'
 import ReactPlayer from 'react-player'
 
 const Wrapper = styled.div`
@@ -45,7 +44,7 @@ const SocialImpact = (props) => (
         muted
         loop
         className='hero_video'
-        url={video}
+        url='https://thenexusfl.com/city.mp4'
       />
     </Section>
     <Section>
