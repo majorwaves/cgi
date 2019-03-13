@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import PageHeader from '../components/PageHeader'
 import image from '../images/bong.jpg'
-import video from '../images/city.mp4'
 import ReactPlayer from 'react-player'
 import Quote from '../components/Quote'
 
@@ -45,7 +44,7 @@ const TheFirm = (props) => (
         muted
         loop
         className='hero_video'
-        url={video}
+        url='https://thenexusfl.com/city.mp4'
       />
     </Section>
     <Section>
