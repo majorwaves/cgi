@@ -19,8 +19,8 @@ const Head = styled.header`
 `;
 
 const Logo = styled.div`
-  height: 60px;
-  padding: 1.5rem 0;
+  height: 48px;
+  padding: 1rem 0;
 
   img {
     height: 100%;

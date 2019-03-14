@@ -21,9 +21,7 @@ const Menu = styled.nav`
   color: ${props => props.theme.color.medium};
   box-sizing: border-box;
   display: flex;
-  align-self: flex-end;
-  /* display: grid;
-  grid-template-columns: 1fr 1fr; */
+  align-items: center;
 
   .nav {
     padding: 0;
@@ -40,9 +38,8 @@ const Menu = styled.nav`
       text-transform: uppercase;
       font-family: ${props => props.theme.type.sans};
       margin-right: 4rem;
-      font-weight: 500;
+      font-weight: 600;
       font-size: 14px;
-      padding-bottom: 2.5rem;
 
       &:hover {
         .subnav {
@@ -83,23 +80,6 @@ const Menu = styled.nav`
 
       &:last-of-type {
         margin-right: 0;
-      }
-    }
-
-    &.main {
-      justify-content: flex-start;
-
-      li {
-        font-weight: 800;
-        font-size: 16px;
-
-        &.active {
-          position: relative;
-
-          &:after {
-            bottom: -20px;
-          }
-        }
       }
     }
   }
