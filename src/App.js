@@ -9,7 +9,7 @@ import Fund from './pages/Fund'
 import Market from './pages/Market'
 import SMA from './pages/SMA'
 import Media from './pages/Media'
-import Team from './pages/Team'
+import Leadership from './pages/Leadership'
 import SocialImpact from './pages/SocialImpact'
 
 const theme = {
@@ -22,6 +22,7 @@ const theme = {
     light: 'rgb(0,150,219)',
     medium: 'rgb(3,66,140)',
     dark: 'rgb(0,38,99)',
+    grey: 'rgb(92, 92, 92)',
     lightGrey: 'rgb(192,194,196)',
     bg:  'rgb(244,244,244)'
   }
@@ -41,7 +42,7 @@ class App extends Component {
             <Route path='/sma' component={SMA} />
             <Route path='/media' component={Media} />
             <Route path='/social-impact' component={SocialImpact} />
-            <Route path='/team' component={Team} />
+            <Route path='/leadership' component={Leadership} />
           </Switch>
           <Footer />
         </div>
