@@ -4,6 +4,7 @@ import logo from '../images/logo.png'
 import Menu from './Nav'
 import { Link } from 'react-router-dom'
 import Search from './Search'
+import Social from './Social'
 
 const Head = styled.header`
   display: grid;
@@ -44,6 +45,7 @@ class Header extends Component {
         <Link to='/'><Logo><img src={logo} alt='logo' /></Logo></Link>
         <Menu />
         <Search />
+        <Social />
       </Head>
     );
   }
