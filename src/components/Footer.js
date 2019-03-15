@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
 import Modal from 'react-modal'
 import ContactForm from './ContactForm'
 import map from '../images/footer-map.svg'
@@ -87,12 +86,6 @@ class Footer extends Component {
           <br/>
           <p>T: 312-925-6537</p>
           <p>F: 786-523-0590</p>
-        </Col>
-        <Col>
-          <h4><Link to='/the-firm'>The Firm</Link></h4>
-          <p><Link to='/team'>Team</Link></p>
-          <p><Link to='/media'>Media</Link></p>
-          <p className='contact' onClick={this.handleOpenModal}>Contact</p>
         </Col>
         <Map>
           <img src={map} alt='map' />
