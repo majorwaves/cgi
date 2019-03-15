@@ -44,7 +44,7 @@ const SocialImpact = (props) => (
         muted
         loop
         className='hero_video'
-        url='https://thenexusfl.com/city.mp4'
+        url='https://admin.thenexusfl.com/city.mp4'
       />
     </Section>
     <Section>
