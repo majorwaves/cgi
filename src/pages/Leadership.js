@@ -26,11 +26,11 @@ const Divider = styled.span`
   display: block;
 `;
 
-const Team = (props) => (
+const Leadership = (props) => (
   <Wrapper>
     <PageHeader
       image={image}
-      title='Team'
+      title='Leadership'
     />
     <Grid>
       <TeamMember
@@ -57,4 +57,4 @@ const Team = (props) => (
   </Wrapper>
 );
 
-export default Team;
+export default Leadership;
