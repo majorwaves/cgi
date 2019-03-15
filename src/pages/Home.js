@@ -13,9 +13,13 @@ const Main = styled.main`
 const Assets = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 2.5vw;
+  grid-gap: 1rem;
   background: ${props => props.theme.color.bg};
-  padding: 3rem 2.5vw;
+  padding: 1rem;
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 class Home extends Component {
@@ -24,7 +28,7 @@ class Home extends Component {
           <Main>
             <Hero
               title='CGI Merchant Group is a private-equity, alternative investment management firm.'
-              buttonText='Learn More'
+              buttonText='Read More'
               image={hero}
             />
             <Assets>
@@ -33,12 +37,14 @@ class Home extends Component {
                 city='Miami'
                 image={fund}
                 url='/platforms'
+                description="Right here we'll put a blurb about the fund. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu eros sit amet est finibus lacinia."
               />
               <Asset
                 title='SMA'
                 city='Miami'
                 image={sma}
                 url='/sma'
+                description="Right here we'll put a blurb about the fund. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu eros sit amet est finibus lacinia."
               />
             </Assets>
           </Main>

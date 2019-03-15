@@ -2,17 +2,21 @@ import React from 'react'
 import styled from 'styled-components'
 import Button from './Button'
 import PropTypes from 'prop-types'
-import ReactPlayer from 'react-player'
+import { Link } from 'react-router-dom';
 
 const Wrapper = styled.section`
   position: relative;
   background: black;
-  height: 60vh;
+  min-height: 500px;
   overflow: hidden;
   background: url(${props => props.bg});
   background-attachment: fixed;
-  background-position: bottom center;
+  background-position: center 700px;
   background-size: cover;
+
+  a {
+    text-decoration: none;
+  }
 
   &:after {
     content: "";
@@ -33,14 +37,14 @@ const Content = styled.div`
   left: 5vw;
   width: 50vw;
   box-sizing: border-box;
-  height: 60vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   z-index: 2;
 
   button {
-    border: ${props => props.gradient ? '2px solid black' : '2px solid white' };
+    border: ${props => props.gradient ? '1px solid black' : '1px solid white' };
     color: ${props => props.gradient ? 'black' : 'white' };
     transition: 0.15s all ease-in-out;
 
@@ -59,20 +63,11 @@ const Title = styled.h1`
   margin: 0 0 2rem 0;
 `;
 
-const Image = styled.div`
-  height: 100%;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-`;
-
-const Hero = ({ video, image, title, subtitle, gradient }) => (
+const Hero = ({ video, image, title, subtitle, gradient, buttonText }) => (
   <Wrapper bg={image}>
     <Content gradient={gradient}>
       <Title gradient={gradient}>{title}</Title>
+      <Link to='/the-firm'><Button primary>{buttonText}</Button></Link>
     </Content>
   </Wrapper>
 );
@@ -80,7 +75,7 @@ const Hero = ({ video, image, title, subtitle, gradient }) => (
 Hero.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  gradient: PropTypes.bool
+  buttonText: PropTypes.string.isRequired,
 }
 
 export default Hero;
