@@ -7,10 +7,12 @@ const Wrapper = styled.div`
   grid-area: search;
   justify-content: flex-end;
   align-items: flex-start;
-  min-width: 108px;
+  min-width: 131px;
+  position: relative;
 `;
 
 const Input = styled.input`
+  position: absolute;
   padding: .25rem 1rem;
   appearance: none;
   border: 1px solid rgba(0,0,0,0.12);
@@ -18,6 +20,7 @@ const Input = styled.input`
   outline: none;
   box-sizing: border-box;
   font-size: 17px;
+  right: 3rem;
 
   &::placeholder {
     font-size: 17px;
