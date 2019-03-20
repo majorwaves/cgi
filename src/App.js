@@ -10,6 +10,7 @@ import Market from './pages/Market'
 import SMA from './pages/SMA'
 import Media from './pages/Media'
 import Leadership from './pages/Leadership'
+import Portfolio from './pages/Portfolio'
 import SocialImpact from './pages/SocialImpact'
 
 const theme = {
@@ -38,6 +39,7 @@ class App extends Component {
             <Route exact path='/' component={Home} />
             <Route path='/the-firm' component={TheFirm} />
             <Route path='/market' component={Market} />
+            <Route path='/fund/portfolio' component={Portfolio} />
             <Route path='/fund' component={Fund} />
             <Route path='/sma' component={SMA} />
             <Route path='/media' component={Media} />
