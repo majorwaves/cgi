@@ -3,8 +3,20 @@ import styled from 'styled-components'
 import logo from '../images/logo.png'
 import Menu from './Nav'
 import { Link } from 'react-router-dom'
-import Search from './Search'
 import Social from './Social'
+
+const customStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)',
+    zIndex                : '10',
+    cursor                : 'auto'
+  }
+};
 
 const Head = styled.header`
   display: grid;
@@ -20,7 +32,7 @@ const Head = styled.header`
 `;
 
 const Logo = styled.div`
-  height: 48px;
+  height: 60px;
   padding: 1rem 0;
 
   img {
@@ -44,7 +56,6 @@ class Header extends Component {
       <Head>
         <Link to='/'><Logo><img src={logo} alt='logo' /></Logo></Link>
         <Menu />
-        <Search />
         <Social />
       </Head>
     );

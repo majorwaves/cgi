@@ -7,7 +7,6 @@ const Wrapper = styled.div`
   grid-area: search;
   justify-content: flex-end;
   align-items: flex-start;
-  min-width: 131px;
   position: relative;
 `;
 
@@ -47,21 +46,10 @@ const Submit = styled.button`
 
 class Search extends Component {
 
-  state = {
-    open: false
-  }
-
-  toggleSearch = () => {
-    this.setState({ open: !this.state.open })
-  }
-
   render() {
     return (
       <Wrapper>
-        {this.state.open &&
-          <Input type='search' placeholder='Search …' />
-        }
-        <Submit border={this.state.open} onClick={this.toggleSearch}><FaSearch size={20} /></Submit>
+        <Submit onClick={this.props.toggleOpen}><FaSearch size={14} /></Submit>
       </Wrapper>
     );
   }

@@ -4,7 +4,9 @@ import { NavLink } from 'react-router-dom'
 import Modal from 'react-modal'
 import ContactForm from './ContactForm'
 import SubNav from './SubNav'
-import navMarker from '../images/nav-marker.svg';
+import navMarker from '../images/nav-marker.svg'
+import Search from './Search'
+import SearchForm from './SearchForm'
 
 const customStyles = {
   content : {
@@ -24,7 +26,7 @@ const Menu = styled.nav`
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  height: calc(48px + 2rem);
+  height: calc(60px + 2rem);
 
   .nav {
     padding: 0;
@@ -44,7 +46,7 @@ const Item = styled.li`
   text-transform: uppercase;
   font-family: ${props => props.theme.type.sans};
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   height: 100%;
   display: flex;
   align-items: center;
@@ -102,11 +104,17 @@ const Item = styled.li`
 class Nav extends Component {
 
   state = {
-    modalOpen: false
+    modalOpen: false,
+    searchOpen: false
   }
 
   handleOpenModal = () => {
     this.setState({ modalOpen: !this.state.modalOpen })
+  }
+
+  handleSearchOpen = () => {
+    console.log('hey')
+    this.setState({ searchOpen: !this.state.searchOpen })
   }
 
   render() {
@@ -132,11 +140,11 @@ class Nav extends Component {
         items:[
           {
             title: 'Overview',
-            url: '/fund/overview'
+            url: '/fund'
           },
           {
             title: 'Strategy',
-            url: '/fund/strategy'
+            url: '/fund#strategy'
           },
           {
             title: 'Portfolio',
@@ -176,9 +184,13 @@ class Nav extends Component {
           <Item><NavLink to='/social-impact'>Social Impact</NavLink></Item>
           <Item><NavLink to='/media'>Media</NavLink></Item>
           <Item className='link' onClick={this.handleOpenModal}>Contact</Item>
+          <Item><Search toggleOpen={this.handleSearchOpen} /></Item>
         </ul>
         <Modal isOpen={this.state.modalOpen} onRequestClose={this.handleOpenModal} contentLabel='Contact' style={customStyles} overlayClassName='Modal_Overlay'>
           <ContactForm />
+        </Modal>
+        <Modal isOpen={this.state.searchOpen} onRequestClose={this.handleSearchOpen} contentLabel='Search' style={customStyles} overlayClassName='Modal_Overlay'>
+          <SearchForm />
         </Modal>
       </Menu>
     );
