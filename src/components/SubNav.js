@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   position: absolute;
   z-index: 10;
   display: none;
-  top: calc(48px + 2rem);
+  top: calc(60px + 2rem);
   left: 0;
   transform: translate(-100px, 0);
   width: 40vw;
@@ -43,7 +43,7 @@ const ListItem = styled.li`
     color: white !important;
     display: block;
     padding: .25rem 1rem;
-    background: ${props => props.active ? props.theme.color.medium : 'transparent'}
+    background: ${props => props.active ? props.theme.color.medium : 'transparent'};
   }
 `;
 
@@ -107,7 +107,7 @@ class SubNav extends Component {
         <List>
           {this.props.items.map((item, index) => {
             return (
-              <ListItem key={index} active={index === this.state.current}>
+              <ListItem key={index} active={index === this.state.current} hasItems={item.items ? true : false}>
                 <Link className='main' onMouseEnter={() => { this.handleHover(index) }} to={item.url}>
                   {item.title}
                   </Link>
