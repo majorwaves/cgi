@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Hero from '../components/Hero'
 import Asset from '../components/Asset'
 import fund from '../images/fund-img.jpg'
-import sma from '../images/sma-1.jpg'
+import sma from '../images/bridge.jpg'
 import hero from '../images/hero_2.jpg'
 
 const Main = styled.main`
@@ -36,7 +36,7 @@ class Home extends Component {
                 title='Fund I'
                 city='Miami'
                 image={fund}
-                url='/platforms'
+                url='/fund'
                 description="Right here we'll put a blurb about the fund. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu eros sit amet est finibus lacinia."
               />
               <Asset

@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import Button from './Button';
-import bg from '../images/quote-min.jpg';
+import React from 'react'
+import styled from 'styled-components'
+import Button from './Button'
+import bg from '../images/quote-min.jpg'
 
 const Wrapper = styled.div`
   color: white;
@@ -12,16 +12,6 @@ const Wrapper = styled.div`
   position: relative;
   min-height: 600px;
 
-  button {
-    border: 2px solid white;
-    color: white;
-    transition: 0.15s all ease-in-out;
-
-    &:hover {
-      background: white;
-      color: ${props => props.theme.color.medium};
-    }
-  }
 
   h3 {
     font-weight: 500;
@@ -60,7 +50,7 @@ const Quote = (props) => (
     <Text>
       <h3>Investment Focus</h3>
       <h1>“We believe in a contrarian, value-oriented approach to real estate investing”</h1>
-      <Button>Learn More</Button>
+      <Button light>Learn More</Button>
     </Text>
   </Wrapper>
 );

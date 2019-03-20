@@ -11,7 +11,7 @@ const Wrapper = styled.section`
   overflow: hidden;
   background: url(${props => props.bg});
   background-attachment: fixed;
-  background-position: center 700px;
+  background-position: center 800px;
   background-size: cover;
 
   a {
@@ -42,17 +42,6 @@ const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   z-index: 2;
-
-  button {
-    border: ${props => props.gradient ? '1px solid black' : '1px solid white' };
-    color: ${props => props.gradient ? 'black' : 'white' };
-    transition: 0.15s all ease-in-out;
-
-    &:hover {
-      background: white;
-      color: ${props => props.theme.color.medium};
-    }
-  }
 `;
 
 const Title = styled.h1`
@@ -67,7 +56,7 @@ const Hero = ({ video, image, title, subtitle, gradient, buttonText }) => (
   <Wrapper bg={image}>
     <Content gradient={gradient}>
       <Title gradient={gradient}>{title}</Title>
-      <Link to='/the-firm'><Button primary>{buttonText}</Button></Link>
+      <Link to='/the-firm'><Button light>{buttonText}</Button></Link>
     </Content>
   </Wrapper>
 );

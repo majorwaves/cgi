@@ -3,13 +3,6 @@ import styled from 'styled-components'
 import {FaFacebookF, FaLinkedin, FaTwitter, FaInstagram} from 'react-icons/fa'
 
 const Wrapper = styled.div`
-  position: absolute;
-  right: 5vw;
-  top: 80px;
-  z-index: 10;
-  padding: 0.5rem;
-  background: white;
-  border-radius: 0 0 5px 5px;
 `;
 
 const List = styled.ul`
@@ -17,6 +10,7 @@ const List = styled.ul`
   padding: 0;
   margin: 0;
   display: flex;
+  line-height: 0;
 `;
 
 const Item = styled.li`

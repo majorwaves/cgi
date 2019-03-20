@@ -38,11 +38,6 @@ const Info = styled.div`
     color: ${props => props.theme.color.grey};
     line-height: 1.6em;
   }
-
-  button {
-    border-color: ${props => props.theme.color.medium};
-    color: ${props => props.theme.color.medium};
-  }
 `;
 
 const Title = styled.div`

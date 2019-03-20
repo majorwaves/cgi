@@ -1,29 +1,26 @@
 import React from 'react'
 import styled from 'styled-components'
 import PageHeader from '../components/PageHeader'
-import Button from '../components/Button';
 import image from '../images/city.jpg'
 import highrise from '../images/highrise.jpg'
-import business from '../images/business.jpg'
-import silhouette from '../images/silhouette.jpg'
+import Quote from '../components/Quote'
+import { FaGlobe, FaPeopleCarry, FaNetworkWired } from 'react-icons/fa'
 
 const Wrapper = styled.div`
 
 `;
 
 const Section = styled.section`
-  width: 70vw;
-  margin: 4rem auto 8rem;
+  width: 80vw;
+  margin: 4rem auto;
   display: grid;
-  grid-template-columns: ${props => props.left ? '2fr 1fr' : '1fr 2fr' };
+  grid-template-columns: 1fr 1fr;
   grid-gap: 5vw;
-  max-width: 1100px;
 
   h1 {
     font-family: ${props => props.theme.type.heading};
     font-size: 36px;
     font-weight: normal;
-    margin-top: 0;
   }
 
   p {
@@ -32,21 +29,41 @@ const Section = styled.section`
 
   img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
 `;
 
-const Intro = styled.div`
-  width: 70vw;
-  max-width: 1100px;
-  margin: 4rem auto 4rem;
-  padding: 4rem;
-  line-height: 1.6em;
-  font-size: 20px;
-  background: white;
-  position: relative;
-  color: ${props => props.theme.color.dark};
+const Strategy = styled.div`
+  border-top: 1px solid rgba(0,0,0,0.12);
+  padding: 4rem 5vw;
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  text-align: center;
+
+  h3 {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 24px;
+    font-family: ${props => props.theme.type.heading};
+  }
+
+  p {
+    padding: 0 4rem;
+  }
+`;
+
+const Icon = styled.div`
+  width: 100px;
+  height: 100px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64px;
+  color: ${props => props.theme.color.light};
+  margin-bottom: 1rem;
+  border-radius: 100%;
+  border: 3px solid ${props => props.theme.color.light};
 `;
 
 const Fund = (props) => (
@@ -54,44 +71,51 @@ const Fund = (props) => (
     <PageHeader
       image={image}
       title='Fund I'
-      text=' Growth oriented investments'
+      text='Growth oriented investments'
     />
-    <Intro {...props}>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer scelerisque est eget libero scelerisque accumsan. Sed at tristique nibh. Sed sed justo viverra, semper lorem vitae, hendrerit diam. Quisque mattis leo quis elementum aliquet. Vestibulum id diam malesuada, fringilla odio et, tincidunt nisi. Duis euismod pellentesque massa quis tempor. Sed faucibus consequat ligula, quis pellentesque odio iaculis ac.</p>
-    </Intro>
-    <Section left>
+    <Section>
       <div>
-        <img alt='lorem ipsum' src={business} />
+        <h1>Lorem Ipsum Dolor</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ullamcorper ultricies tortor, non laoreet arcu mattis at. Nulla eu justo sed neque convallis fermentum nec in turpis. Cras iaculis massa tellus, eget cursus nunc vulputate sit amet. Curabitur sed velit id nulla vehicula vestibulum. Nulla hendrerit lorem velit, sit amet malesuada arcu commodo eget. Vivamus ac lorem interdum, finibus ipsum in, cursus quam. Etiam eu rutrum orci.</p>
       </div>
       <div>
-        <h1>Fusce Interdum Tincidunt Dolor</h1>
-        <p>Donec consectetur hendrerit ante, sit amet sagittis massa vestibulum vel. In sagittis augue non odio molestie, vel dignissim risus sollicitudin.</p>
-        <br/>
-        <Button>Learn More</Button>
+        <img src={highrise} alt='image' />
       </div>
     </Section>
     <Section>
       <div>
-        <h1>Fusce Interdum Tincidunt Dolor</h1>
-        <p>Donec consectetur hendrerit ante, sit amet sagittis massa vestibulum vel. In sagittis augue non odio molestie, vel dignissim risus sollicitudin.</p>
-        <br/>
-        <Button>Learn More</Button>
+        <h1>Nulla Rutrum</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ullamcorper ultricies tortor, non laoreet arcu mattis at. Nulla eu justo sed neque convallis fermentum nec in turpis. Cras iaculis massa tellus, eget cursus nunc vulputate sit amet. Curabitur sed velit id nulla vehicula vestibulum. Nulla hendrerit lorem velit, sit amet malesuada arcu commodo eget. Vivamus ac lorem interdum, finibus ipsum in, cursus quam. Etiam eu rutrum orci.</p>
       </div>
       <div>
-        <img alt='lorem ipsum' src={silhouette} />
+        <h1>Sed Dolor Nunc</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ullamcorper ultricies tortor, non laoreet arcu mattis at. Nulla eu justo sed neque convallis fermentum nec in turpis. Cras iaculis massa tellus, eget cursus nunc vulputate sit amet. Curabitur sed velit id nulla vehicula vestibulum. Nulla hendrerit lorem velit, sit amet malesuada arcu commodo eget. Vivamus ac lorem interdum, finibus ipsum in, cursus quam. Etiam eu rutrum orci.</p>
       </div>
     </Section>
-    <Section left>
+    <Strategy id="strategy">
       <div>
-        <img alt='lorem ipsum' src={highrise} />
+        <Icon>
+          <FaGlobe />
+        </Icon>
+        <h3>Lorem dolor sit</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ullamcorper ultricies tortor</p>
       </div>
       <div>
-        <h1>Fusce Interdum Tincidunt Dolor</h1>
-        <p>Donec consectetur hendrerit ante, sit amet sagittis massa vestibulum vel. In sagittis augue non odio molestie, vel dignissim risus sollicitudin.</p>
-        <br/>
-        <Button>Learn More</Button>
+        <Icon>
+          <FaPeopleCarry />
+        </Icon>
+        <h3>Lorem dolor sit</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ullamcorper ultricies tortor</p>
       </div>
-    </Section>
+      <div>
+        <Icon>
+          <FaNetworkWired />
+        </Icon>
+        <h3>Lorem dolor sit</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ullamcorper ultricies tortor</p>
+      </div>
+    </Strategy>
+    <Quote />
   </Wrapper>
 );
 
