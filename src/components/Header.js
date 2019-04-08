@@ -5,19 +5,6 @@ import Menu from './Nav'
 import { Link } from 'react-router-dom'
 import Social from './Social'
 
-const customStyles = {
-  content : {
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)',
-    zIndex                : '10',
-    cursor                : 'auto'
-  }
-};
-
 const Head = styled.header`
   display: grid;
   grid-template-columns: 1fr 6fr;

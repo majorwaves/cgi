@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import arrow from '../images/arrow.svg'
 
 const Wrapper = styled.div`
   position: absolute;
   z-index: 10;
-  display: none;
   top: calc(60px + 2rem);
   left: 0;
-  transform: translate(-100px, 0);
+  transform: translate(-100px, -200%);
   width: 40vw;
   min-width: 900px;
   box-sizing: border-box;
@@ -18,10 +18,9 @@ const Box = styled.div`
   background: ${props => props.theme.color.dark};
   color: white;
   display: grid;
-  grid-template-columns: 500px 300px;
+  grid-template-columns: 500px 400px;
   padding: 1rem 0;
-  height: 500px;
-
+  height: 160px;
 `;
 
 const List = styled.ul`
@@ -45,6 +44,17 @@ const ListItem = styled.li`
     padding: .25rem 1rem;
     background: ${props => props.active ? props.theme.color.medium : 'transparent'};
   }
+
+  &:after {
+    content: ${props => props.hasItems ? '""' : 'none'};
+    position: absolute;
+    transform: translate(0, -25px);
+    left: 230px;
+    width: 10px;
+    height: 10px;
+    background: url(${arrow});
+    background-size: contain;
+  }
 `;
 
 const Info = styled.div`
@@ -56,6 +66,7 @@ const Info = styled.div`
   font-size: 18px !important;
   color: rgba(255,255,255,0.4);
   text-transform: none !important;
+  line-height: 1.6em;
 `;
 
 const SubList = styled.ul`
@@ -92,13 +103,17 @@ const SubListItem = styled.li`
 class SubNav extends Component {
 
   state = {
-    current: 0
+    current: 0,
+    text: this.props.items[0].text
   }
 
-  handleHover = (index) => {
-    this.setState({ current: index })
+  handleHover = (index, text) => {
+    this.setState({ current: index, text: text })
   }
 
+  handleSubHover = (text) => {
+    this.setState({ text: text })
+  }
 
   render() {
     return (
@@ -108,7 +123,7 @@ class SubNav extends Component {
           {this.props.items.map((item, index) => {
             return (
               <ListItem key={index} active={index === this.state.current} hasItems={item.items ? true : false}>
-                <Link className='main' onMouseEnter={() => { this.handleHover(index) }} to={item.url}>
+                <Link className='main' onMouseEnter={() => { this.handleHover(index, item.text) }} to={item.url}>
                   {item.title}
                   </Link>
                   {item.items
@@ -117,7 +132,7 @@ class SubNav extends Component {
                        {this.props.items[this.state.current].items.map((subItem, index) => {
                          return (
                            <SubListItem key={index}>
-                             <Link  to={subItem.url}>
+                             <Link onMouseEnter={() => { this.handleSubHover(subItem.text) }} to={subItem.url}>
                               {subItem.title}
                              </Link>
                            </SubListItem>
@@ -131,7 +146,7 @@ class SubNav extends Component {
           )}
         </List>
         <Info>
-          {this.props.items[this.state.current].text}
+          {this.state.text}
         </Info>
       </Box>
       </Wrapper>

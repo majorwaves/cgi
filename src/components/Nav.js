@@ -51,7 +51,6 @@ const Item = styled.li`
   display: flex;
   align-items: center;
 
-
   &.has-subnav {
     cursor: pointer;
 
@@ -60,7 +59,7 @@ const Item = styled.li`
       background-position: center bottom;
 
       .subnav {
-        display: block;
+        transform: translate(-100px, 0);
       }
     }
   }
@@ -77,7 +76,7 @@ const Item = styled.li`
     color: ${props => props.theme.color.medium};
     text-decoration: none;
 
-    &.active {
+    /* &.active {
       position: relative;
 
       &:after {
@@ -89,7 +88,7 @@ const Item = styled.li`
         background: ${props => props.theme.color.lightGrey};
         display: block;
       }
-    }
+    } */
 
     &:hover {
       color: ${props => props.theme.color.light};
@@ -123,12 +122,12 @@ class Nav extends Component {
       {
         title: 'Overview',
         url: '/the-firm',
-        text: "Right here we'll put a blurb about the firm",
+        text: "CGI Merchant Group is a private-equity, alternative investment management firm.",
       },
       {
         title: 'Leadership',
         url: '/leadership',
-        text: "Right here we'll put a blurb about our team"
+        text: "CGI Merchant Group has attracted the most talented and experienced professionals in the industry."
       }
     ]
 
@@ -136,19 +135,22 @@ class Nav extends Component {
       {
         title: 'Fund I',
         url: '/fund',
-        text: "Right here we'll put the blurb about Fund I",
+        text: "High-quality institutional-grade commercial real estate properties with a value-added strategy.",
         items:[
           {
             title: 'Overview',
-            url: '/fund'
+            url: '/fund',
+            text: 'High-quality institutional-grade commercial real estate properties with a value-added strategy.'
           },
           {
             title: 'Strategy',
-            url: '/fund#strategy'
+            url: '/fund#strategy',
+            text: 'Income-driven, targeted, proprietary real estate solutions with low volatility.'
           },
           {
             title: 'Portfolio',
-            url: '/fund/portfolio'
+            url: '/fund/portfolio',
+            text: 'Institutional quality, Class A assets in office and mixed-use properties'
           }
         ]
       },
@@ -173,7 +175,7 @@ class Nav extends Component {
       <Menu>
         <ul className='nav main'>
           <Item className='has-subnav'>
-            The Firm
+            <NavLink to='/the-firm'>The Firm</NavLink>
             <SubNav items={firmNav} />
           </Item>
           <Item className='has-subnav'>

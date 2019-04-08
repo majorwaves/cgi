@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import PageHeader from '../components/PageHeader'
-import people from '../images/people.jpg'
+import people from '../images/market-neu.jpg'
 import Quote from '../components/Quote'
 
 const Wrapper = styled.div`
@@ -58,7 +58,6 @@ const Market = (props) => (
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ullamcorper ultricies tortor, non laoreet arcu mattis at. Nulla eu justo sed neque convallis fermentum nec in turpis. Cras iaculis massa tellus, eget cursus nunc vulputate sit amet. Curabitur sed velit id nulla vehicula vestibulum. Nulla hendrerit lorem velit, sit amet malesuada arcu commodo eget. Vivamus ac lorem interdum, finibus ipsum in, cursus quam. Etiam eu rutrum orci.</p>
       </div>
     </Section>
-    <Quote />
   </Wrapper>
 );
 

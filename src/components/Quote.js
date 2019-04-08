@@ -1,12 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import Button from './Button'
-import bg from '../images/quote-min.jpg'
+import bg from '../images/quote-neu.jpg'
 
 const Wrapper = styled.div`
   color: white;
   height: 70vh;
-  background: url(${bg});
+  background: url(${props => props.image ? props.image : bg});
   background-size: cover;
   background-attachment: fixed;
   position: relative;
@@ -23,9 +22,10 @@ const Wrapper = styled.div`
 
   h1 {
     font-family: ${props => props.theme.type.heading};
-    font-size: 64px;
+    font-size: 48px;
     font-weight: normal;
     text-align: center;
+    margin-bottom: 4rem;
   }
 `;
 
@@ -45,12 +45,19 @@ const Text = styled.div`
 
 `;
 
+const Note = styled.div`
+  font-family: ${props => props.theme.type.sans};
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 0.3rem;
+`;
+
 const Quote = (props) => (
-  <Wrapper>
+  <Wrapper {...props}>
     <Text>
       <h3>Investment Focus</h3>
-      <h1>“We believe in a contrarian, value-oriented approach to real estate investing”</h1>
-      <Button light>Learn More</Button>
+      <h1>{props.text}</h1>
+      <Note>– CGI Merchant Group</Note>
     </Text>
   </Wrapper>
 );

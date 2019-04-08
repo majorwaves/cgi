@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import PageHeader from '../components/PageHeader'
-import image from '../images/bong.jpg'
+import image from '../images/media.jpg'
 
 const Wrapper = styled.div`
 `;
@@ -18,6 +18,10 @@ const Grid = styled.div`
 
 const Article = styled.div`
   background: white;
+
+  a {
+    text-decoration: none;
+  }
 
   h2 {
     font-size: 24px;
@@ -38,6 +42,7 @@ const Article = styled.div`
 
     span {
       opacity: 0.5;
+      color: black;
       font-size: 14px;
     }
   }
@@ -54,32 +59,44 @@ class Media extends Component {
         />
         <Grid>
           <Article>
-            <h2>CGI Merchant Group, which purchased the building in 2013 for $26.75 million, said the office portion is now completely occupied.</h2>
-            <div><span>Jul 29, 2015</span><span>The Real Deal NYC</span></div>
+            <a target="_blank" href="https://www.businesswire.com/news/home/20180725005140/en/CGI-Successfully-Completes-Refinancing-Class-A-Properties-South">
+            <h2>CGI Successfully Completes Refinancing of Four Class-A Properties in South Florida</h2>
+            <div><span>July 25, 2018</span><span>Business Wire</span></div>
+            </a>
           </Article>
 
           <Article>
+            <a target="_blank" href="https://therealdeal.com/miami/tag/cgi-merchant-group/">
             <h2>Photos: On the scene at ribbon cutting of 55 Miracle Mile</h2>
             <div><span>Jun 30, 2015</span><span>The Real Deal, South FL Real Estate News</span></div>
+            </a>
           </Article>
 
           <Article>
+            <a target="_blank" href="https://www.law.com/dailybusinessreview/almID/1202729582207/Whats-Driving-CGI-Merchant-Group-Investments-in-South-Florida-Real-Estate/?slreturn=20190227102204">
             <h2>What's Driving CGI Merchant Group Investment is South FL Real Estate?</h2>
             <div><span>Jun 16, 2015</span><span>DBR Daily Business Review</span></div>
+            </a>
           </Article>
           <Article>
+            <a target="_blank" href="https://www.bizjournals.com/southflorida/print-edition/2015/05/22/raoul-thomas-on-finding-value-where-others-can-t.html">
             <h2>Raoul Thomas on finding value where others can’t</h2>
             <div><span>May 22, 2015</span><span>South Florida Business Journal</span></div>
+            </a>
           </Article>
 
           <Article>
+            <a target="_blank" href="https://www.cpexecutive.com/post/executive-spotlight-raoul-thomas-cgi-merchant-group/">
             <h2>Executive Spotlight: Raoul Thomas, CGI Merchant Group</h2>
             <div><span>Apr 14, 2015</span><span>Commercial Property Executive</span></div>
+            </a>
           </Article>
 
           <Article>
+            <a target="_blank" href="https://communitynewspapers.com/biscayne-bay/cgi-merchant-group-breaks-ground-at-1100-biscayne/">
             <h2>CGI Merchant Group Breaks Ground at 1100 Biscayne</h2>
             <div><span>Mar 14, 2015</span><span>Brickell</span></div>
+            </a>
           </Article>
         </Grid>
       </Wrapper>

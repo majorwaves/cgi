@@ -9,6 +9,7 @@ const Hero = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: ${props => props.bottom ? 'bottom' : 'center'};
   }
 `
 
@@ -34,8 +35,8 @@ const Overlay = styled.div`
   }
 `;
 
-const PageHeader = ({image, title, text}) => (
-  <Hero>
+const PageHeader = ({image, title, text, bottom}) => (
+  <Hero bottom={bottom}>
     <img src={image} alt={title} />
     <Overlay>
       <h1>{title}</h1>

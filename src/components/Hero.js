@@ -25,7 +25,7 @@ const Wrapper = styled.section`
     left: 0;
     width: 100%;
     height: 100%;
-    background: ${props => props.theme.color.light};
+    background: ${props => props.theme.color.medium};
     z-index: 1;
     mix-blend-mode: multiply;
   }

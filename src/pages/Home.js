@@ -4,7 +4,7 @@ import Hero from '../components/Hero'
 import Asset from '../components/Asset'
 import fund from '../images/fund-img.jpg'
 import sma from '../images/bridge.jpg'
-import hero from '../images/hero_2.jpg'
+import home from '../images/home.jpg'
 
 const Main = styled.main`
 
@@ -29,7 +29,7 @@ class Home extends Component {
             <Hero
               title='CGI Merchant Group is a private-equity, alternative investment management firm.'
               buttonText='Read More'
-              image={hero}
+              image={home}
             />
             <Assets>
               <Asset
@@ -37,7 +37,7 @@ class Home extends Component {
                 city='Miami'
                 image={fund}
                 url='/fund'
-                description="Right here we'll put a blurb about the fund. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu eros sit amet est finibus lacinia."
+                description="Access to a property institutional real estate platform with proven real estate experience and a prominent presence in the U.S."
               />
               <Asset
                 title='SMA'

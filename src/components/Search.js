@@ -10,23 +10,6 @@ const Wrapper = styled.div`
   position: relative;
 `;
 
-const Input = styled.input`
-  position: absolute;
-  padding: .25rem 1rem;
-  appearance: none;
-  border: 1px solid rgba(0,0,0,0.12);
-  border-radius: .25rem 0 0 .25rem;
-  outline: none;
-  box-sizing: border-box;
-  font-size: 17px;
-  right: 3rem;
-
-  &::placeholder {
-    font-size: 17px;
-    font-family: ${props => props.theme.type.sans};
-  }
-`;
-
 const Submit = styled.button`
   padding: .25rem 1rem;
   box-sizing: border-box;

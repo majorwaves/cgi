@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import Button from './Button'
 
 const Person = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 4rem;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 1rem;
   padding: 2rem;
 
   &:nth-of-type(odd) {
@@ -24,22 +25,38 @@ const Person = styled.div`
     }
   }
 
-  h5 {
+  h4 {
     margin: 0 0 1rem 0;
     font-size: 24px;
     font-weight: 600;
   }
+
+  h5 {
+    margin: 0 0 1rem 0;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.6em;
+    opacity: 0.8;
+  }
 `;
 
-const TeamMember = ({ name, title, image }) => (
-  <Person>
-    <div className='image'>
-      <img src={image} alt={title} />
-    </div>
+const TeamMember = ({ name, title, image, bio, onClick, excerpt }) => (
+  <Person hasImage={image !== ''}>
     <div>
-      <h5>{name}</h5>
-      <p>{title}</p>
+      <h4>{name}</h4>
+      <h5>{title}</h5>
+      <p>{excerpt}</p>
+      <p><Button onClick={onClick}>Read More</Button></p>
     </div>
+    {image !== '' &&
+      <div className='image'>
+        <img src={image} alt={title} />
+      </div>
+    }
   </Person>
 );
 

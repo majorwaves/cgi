@@ -28,8 +28,8 @@ const Wrapper = styled.button`
   }
 `;
 
-const Button = ({ light, children}) => (
-  <Wrapper light={light}>
+const Button = ({ light, children, onClick}) => (
+  <Wrapper light={light} onClick={onClick}>
     {children}
   </Wrapper>
 );
