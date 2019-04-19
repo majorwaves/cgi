@@ -13,6 +13,8 @@ const Form = styled.form`
 
   button {
     width: 100%;
+    display: inline-block;
+    cursor: pointer;
   }
 `;
 

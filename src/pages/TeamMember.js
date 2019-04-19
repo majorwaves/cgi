@@ -44,7 +44,6 @@ class TeamMember extends Component {
       case 'mike-keilty':
         return three;
       default:
-
     }
   }
 

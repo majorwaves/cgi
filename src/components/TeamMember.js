@@ -1,61 +1,49 @@
 import React from 'react'
 import styled from 'styled-components'
-import Button from './Button'
 
 const Person = styled.div`
+
+`;
+
+const Row = styled.div`
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-gap: 1rem;
-  padding: 2rem;
+  grid-template-columns: 1fr 2fr 1fr 1fr .5fr;
+  padding: 0;
+  font-size: 13px;
+  cursor: pointer;
 
-  &:nth-of-type(odd) {
-    border-right: 1px solid rgba(0,0,0,0.12);
-  }
-
-  div {
-    img {
-      width: 15vw;
-      height: 15vw
-      object-fit: contain;
-    }
-
-    &.pic {
-      background: black;
-      padding-bottom: 100%;
-    }
-  }
-
-  h4 {
-    margin: 0 0 1rem 0;
-    font-size: 24px;
-    font-weight: 600;
-  }
-
-  h5 {
-    margin: 0 0 1rem 0;
-    font-size: 16px;
-    font-weight: 600;
-  }
-
-  p {
-    font-size: 14px;
-    line-height: 1.6em;
-    opacity: 0.8;
+  &:hover {
+    color: white;
+    background: ${props => props.theme.color.light};
   }
 `;
 
-const TeamMember = ({ name, title, image, bio, onClick, excerpt }) => (
+const Col = styled.div`
+  padding: 1rem .5rem;
+  img {
+    width: 100%;
+  }
+`;
+
+const Extra = styled.div`
+  grid-column: span 5;
+  font-size: 13px;
+  padding: 1rem;
+  line-height: 1.5em;
+`;
+
+const TeamMember = ({ name, title, image, location, onClick, bio, unit, excerpt, selected }) => (
   <Person hasImage={image !== ''}>
-    <div>
-      <h4>{name}</h4>
-      <h5>{title}</h5>
-      <p>{excerpt}</p>
-      <p><Button onClick={onClick}>Read More</Button></p>
-    </div>
-    {image !== '' &&
-      <div className='image'>
-        <img src={image} alt={title} />
-      </div>
+    <Row onClick={onClick}>
+      <Col>{name}</Col>
+      <Col>{title}</Col>
+      <Col>{unit}</Col>
+      <Col>{location}</Col>
+    </Row>
+    {selected &&
+      <Extra>
+        {bio}
+      </Extra>
     }
   </Person>
 );

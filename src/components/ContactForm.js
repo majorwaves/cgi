@@ -8,11 +8,16 @@ const Form = styled.form`
   h2 {
     font-size: 36px;
     margin: 0 0 2rem 0;
+    text-align: center;
+    color: ${props => props.theme.color.dark};
     font-family: ${props => props.theme.type.heading};
   }
 
   button {
     width: 100%;
+    text-align: center;
+    display: inline-block;
+    padding: 1rem 2rem;
   }
 `;
 
@@ -24,7 +29,7 @@ const Input = styled.input`
   display: block;
   box-sizing: border-box;
   min-width: 300px;
-  border-radius: 10px;
+  border-radius: 4px;
 
   &::placeholder {
     font-size: 16px;
@@ -34,6 +39,10 @@ const Input = styled.input`
 const ContactForm = (props) => (
   <Form {...props}>
     <h2>Contact Us</h2>
+    <div>
+      <span>Investor Contact: investor@cgimg.com </span>
+      <span>Head Office Tel: (786) 581 4800</span>
+    </div>
     <Input placeholder='Email address' />
     <Input placeholder='Name' />
     <Input placeholder='Company Name' />

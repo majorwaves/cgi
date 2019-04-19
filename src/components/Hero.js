@@ -11,7 +11,7 @@ const Wrapper = styled.section`
   overflow: hidden;
   background: url(${props => props.bg});
   background-attachment: fixed;
-  background-position: center 800px;
+  background-position: ${props => props.top ? 'top' : 'center 800px'};
   background-size: cover;
 
   a {
@@ -52,8 +52,8 @@ const Title = styled.h1`
   margin: 0 0 2rem 0;
 `;
 
-const Hero = ({ video, image, title, subtitle, gradient, buttonText }) => (
-  <Wrapper bg={image}>
+const Hero = ({ video, image, title, subtitle, gradient, buttonText, top}) => (
+  <Wrapper bg={image} top={top}>
     <Content gradient={gradient}>
       <Title gradient={gradient}>{title}</Title>
       <Link to='/the-firm'><Button light>{buttonText}</Button></Link>

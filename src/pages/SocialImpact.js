@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import PageHeader from '../components/PageHeader'
 import school from '../images/school.jpg'
 import photo from '../images/social-impact.jpg';
-import ReactPlayer from 'react-player'
 
 const Wrapper = styled.div`
 
