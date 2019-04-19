@@ -107,7 +107,8 @@ class Portfolio extends Component {
           <Inner>
             <ReactPlayer
               controls
-              url='https://admin.thenexusfl.com/miracle.mp4'
+              playing
+              url='https://youtu.be/rjlV_XszlVM'
             />
           </Inner>
         )
@@ -115,8 +116,9 @@ class Portfolio extends Component {
         return (
           <Inner>
             <ReactPlayer
-              conrtols
-              url='https://admin.thenexusfl.com/nexus-video.mp4'
+              controls
+              playing
+              url='https://youtu.be/3YEa-NRF9So'
             />
           </Inner>
         )
