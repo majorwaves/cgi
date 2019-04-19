@@ -11,8 +11,8 @@
     "react-icons": "^3.5.0",
     "react-modal": "^3.8.1",
     "react-player": "^1.9.3",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.5",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "2.1.8",
     "react-sidebar": "^3.0.2",
     "styled-components": "^4.1.3"
   },
