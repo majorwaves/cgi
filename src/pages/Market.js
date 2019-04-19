@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import PageHeader from '../components/PageHeader'
-import people from '../images/market-neu.jpg'
-import Quote from '../components/Quote'
+import people from '../images/market-min.jpg'
 
 const Wrapper = styled.div`
 

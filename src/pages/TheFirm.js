@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import PageHeader from '../components/PageHeader'
 import image from '../images/firm-neu2.jpg'
 import Quote from '../components/Quote'
-import image2 from '../images/firm-right.jpg'
+import image2 from '../images/fund-right-min.jpg'
 
 const Wrapper = styled.div`
 
@@ -20,6 +20,7 @@ const Section = styled.section`
     img {
       width: 100%;
       height: 100%;
+      height: 50vw;
       object-fit: cover;
     }
   }

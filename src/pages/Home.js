@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Hero from '../components/Hero'
 import Asset from '../components/Asset'
 import fund from '../images/fund-img.jpg'
-import sma from '../images/bridge.jpg'
+import sma from '../images/sma-min.jpg'
 import home from '../images/home.jpg'
 
 const Main = styled.main`
@@ -30,6 +30,7 @@ class Home extends Component {
               title='CGI Merchant Group is a private-equity, alternative investment management firm.'
               buttonText='Read More'
               image={home}
+              top
             />
             <Assets>
               <Asset
