@@ -9,7 +9,7 @@ import Fund from './pages/Fund'
 import Market from './pages/Market'
 import SMA from './pages/SMA'
 import Media from './pages/Media'
-import Leadership from './pages/Leadership'
+import Team from './pages/Team'
 import Portfolio from './pages/Portfolio'
 import SocialImpact from './pages/SocialImpact'
 import TeamMember from './pages/TeamMember'
@@ -45,8 +45,7 @@ class App extends Component {
             <Route path='/sma' component={SMA} />
             <Route path='/media' component={Media} />
             <Route path='/social-impact' component={SocialImpact} />
-            <Route path='/leadership/:slug' component={TeamMember} />
-            <Route exact path='/leadership' component={Leadership} />
+            <Route exact path='/team' component={Team} />
           </Switch>
           <Footer />
         </div>

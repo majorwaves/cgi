@@ -125,8 +125,8 @@ class Nav extends Component {
         text: "CGI Merchant Group is a private-equity, alternative investment management firm.",
       },
       {
-        title: 'Leadership',
-        url: '/leadership',
+        title: 'Team',
+        url: '/team',
         text: "CGI Merchant Group has attracted the most talented and experienced professionals in the industry."
       }
     ]
