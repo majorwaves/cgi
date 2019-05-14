@@ -2,12 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Person = styled.div`
-
+  border-bottom: 1px dashed rgba(0,0,0,0.12);
 `;
 
 const Row = styled.div`
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr 1fr .5fr;
+  grid-template-columns: 1fr 2fr 1fr;
   padding: 0;
   font-size: 13px;
   cursor: pointer;
@@ -32,13 +32,12 @@ const Extra = styled.div`
   line-height: 1.5em;
 `;
 
-const TeamMember = ({ name, title, image, location, onClick, bio, unit, excerpt, selected }) => (
+const TeamMember = ({ name, title, image, onClick, bio, unit, excerpt, selected }) => (
   <Person hasImage={image !== ''}>
     <Row onClick={onClick}>
       <Col>{name}</Col>
       <Col>{title}</Col>
       <Col>{unit}</Col>
-      <Col>{location}</Col>
     </Row>
     {selected &&
       <Extra>

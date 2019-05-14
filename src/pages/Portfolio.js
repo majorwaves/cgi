@@ -74,6 +74,10 @@ const Section = styled.section`
 `;
 
 const Inner = styled.div`
+a {
+  color: ${props => props.theme.color.dark};
+  text-decoration: none;
+}
 `;
 
 const Intro = styled.div`
@@ -108,7 +112,7 @@ class Portfolio extends Component {
             <ReactPlayer
               controls
               playing
-              url='https://youtu.be/rjlV_XszlVM'
+              url='https://www.youtube.com/watch?v=2NyfzVzGSUg'
             />
           </Inner>
         )
@@ -118,8 +122,10 @@ class Portfolio extends Component {
             <ReactPlayer
               controls
               playing
-              url='https://youtu.be/3YEa-NRF9So'
+              url=' https://www.youtube.com/watch?time_continue=73&v=VEpzcgkdh88'
             />
+            <br/>
+            <p><a rel="noopener noreferrer" target="_blank" href="https://www.thenexusfl.com">The Nexus Workspaces</a></p>
           </Inner>
         )
       default:
@@ -144,8 +150,8 @@ class Portfolio extends Component {
           </div>
           <div>
             <h1>55 Miracle Mile</h1>
-            <p>55 Miracle Mile is a mixed-use office and retail property. CGI saw significant upside potential in the forthcoming below-market rollovers and an underexposed parking garage.</p>
-            <p>CGI acquired this commercial component containing office and retail space in a highly visible and visited street in Coral Gables. Capex and functional improvements created the luxury environment needed to attract high-quality tenants, allowing CGI to capture a premium on rent rollovers. </p>
+            <p>Located in the heart of Coral Gables, the mixed-use property is a staple with well-known tenants such as Cibo Wine Bar and UPS. CGI saw significant upside potential in the forthcoming below-market rollovers and an underexposed parking garage.</p>
+            <p>Capex and functional improvements created the luxury environment needed to attract high-quality tenants, allowing CGI to capture a premium on rent rollovers</p>
             <br/>
             <Button onClick={() => { this.handleClick('miracle') }}>Learn More</Button>
           </div>

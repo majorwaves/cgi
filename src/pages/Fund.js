@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import PageHeader from '../components/PageHeader'
-import image from '../images/market-new.jpg'
+import image from '../images/fund-img.jpg'
+import image2 from '../images/miracle.jpg'
 import Quote from '../components/Quote'
 import ReactPlayer from 'react-player'
 import Modal from 'react-modal'
@@ -38,6 +39,7 @@ const Section = styled.section`
       height: 100%;
       width: 100%;
       object-fit: cover;
+      object-position: center center;
     }
 
     .icon {
@@ -131,13 +133,14 @@ class Fund extends Component {
           </div>
           <div className='video' onClick={this.handleClick}>
             <div className='icon'><FaPlayCircle /></div>
-            <img src='https://img.youtube.com/vi/rjlV_XszlVM/maxresdefault.jpg' alt='miracle mile' />
+            <img src={image2} alt='miracle mile' />
           </div>
         </Section>
         <Section>
           <div>
             <h1>Asset Management</h1>
-            <p>The firms vertically integrated asset management platform allows us to create cost synergies and operate efficiently. Active leasing through a diligent tenant screening procedure with internal marketing capabilities</p>
+            <p>The firms vertically integrated asset management platform allows us to create cost synergies and operate efficiently. Active leasing through a diligent tenant screening procedure with internal marketing capabilities. The Operating Company (“OpCo”) has recently added an incremental value to the property appraisals as of May 2018. The asset management team is comprised of individuals with experience in managing real estate properties.</p>
+            <p>CGI believes in the active, hands-on management of current portfolio properties as a necessary approach to ensure that standards are met and performance improves continuously. Our investment thesis is based on a vertically integrated asset management approach, which allows us to take advantage of cost synergies and operating efficiencies, supported by an active leasing and internal takeover of underperforming assets to instill market discipline.</p>
           </div>
           <div>
             <h1>Capital Markets</h1>
@@ -171,10 +174,11 @@ class Fund extends Component {
         <Modal isOpen={this.state.modalOpen} onRequestClose={this.handleClick} style={customStyles}>
           <ReactPlayer
             playing
-            url='https://www.youtube.com/watch?v=rjlV_XszlVM'
+            controls
+            url='https://www.youtube.com/watch?v=2NyfzVzGSUg'
           />
         </Modal>
-        <Quote text='“CGI’s team designs each capital structure for each deal, and then selects the most suitable candidates depending on the envisioned capitalization strategy.”' />
+        <Quote dark text='“CGI’s team designs each capital structure for each deal, and then selects the most suitable candidates depending on the envisioned capitalization strategy.”' />
       </Wrapper>
     )
   }

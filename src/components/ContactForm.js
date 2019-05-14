@@ -4,6 +4,17 @@ import Button from './Button'
 
 const Form = styled.form`
   padding: 1rem;
+  text-align: center;
+
+  p {
+    font-size: 14px;
+    color: ${props => props.theme.color.dark};
+  }
+
+  a {
+    color: ${props => props.theme.color.medium};
+    text-decoration: none;
+  }
 
   h2 {
     font-size: 36px;
@@ -40,8 +51,8 @@ const ContactForm = (props) => (
   <Form {...props}>
     <h2>Contact Us</h2>
     <div>
-      <span>Investor Contact: investor@cgimg.com </span>
-      <span>Head Office Tel: (786) 581 4800</span>
+      <p><strong>Investor Contact</strong>: <a href="mailto:investor@cgimg.com">investor@cgimg.com</a></p>
+      <p><strong>Head Office Tel</strong>: <a href="tel:17865814800">(786) 581 4800</a></p><br/>
     </div>
     <Input placeholder='Email address' />
     <Input placeholder='Name' />

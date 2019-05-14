@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Modal from 'react-modal'
 import ContactForm from './ContactForm'
 import map from '../images/footer-map.svg'
+import { device } from '../utils/devices'
 
 const customStyles = {
   content : {
@@ -15,19 +16,32 @@ const customStyles = {
   }
 };
 
-
 const Foot = styled.footer`
   padding: 3rem 5vw;
   background: ${props => props.theme.color.dark};
   color: white;
-  display: flex;
-  justify-content: space-between;
   font-family: ${props=> props.theme.type.sans};
+
+  @media ${device.laptop}{
+    display: flex;
+    justify-content: space-between;
+  }
 `;
 
 const Col = styled.div`
   font-size: 14px;
   line-height: 1em;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  padding-bottom: 1rem;
+
+  @media ${device.laptop}{
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
 
   a {
     color: white;
@@ -48,6 +62,20 @@ const Col = styled.div`
 `;
 
 const Map = styled.div`
+  margin-top: 3rem;
+  text-align: center;
+
+  @media ${device.laptop}{
+    margin: 0;
+  }
+
+  img {
+    width: 200px;
+
+    @media ${device.laptop}{
+      width: auto;
+    }
+  }
 `;
 
 class Footer extends Component {

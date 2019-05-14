@@ -58,6 +58,14 @@ class Media extends Component {
           title='Media'
         />
         <Grid>
+
+          <Article>
+            <a target="_blank" rel="noreferrer noopener" href="https://therealdeal.com/miami/2019/04/24/this-co-working-company-opened-two-offices-in-palm-beach-county/">
+            <h2>This co-working company opened two offices in Palm Beach County</h2>
+            <div><span>April 24, 2019</span><span>The Real Deal</span></div>
+            </a>
+          </Article>
+
           <Article>
             <a target="_blank" rel="noreferrer noopener" href="https://www.businesswire.com/news/home/20180725005140/en/CGI-Successfully-Completes-Refinancing-Class-A-Properties-South">
             <h2>CGI Successfully Completes Refinancing of Four Class-A Properties in South Florida</h2>

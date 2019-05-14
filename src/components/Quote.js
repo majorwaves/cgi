@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import bg from '../images/quote-neu.jpg'
+import { device } from '../utils/devices'
 
 const Wrapper = styled.div`
   color: white;
@@ -9,8 +10,11 @@ const Wrapper = styled.div`
   background-size: cover;
   background-attachment: fixed;
   position: relative;
-  min-height: 600px;
+  min-height: 400px;
 
+  @media ${device.laptop}{
+    min-height: 600px;
+  }
 
   h3 {
     font-weight: 500;
@@ -22,10 +26,15 @@ const Wrapper = styled.div`
 
   h1 {
     font-family: ${props => props.theme.type.heading};
-    font-size: 48px;
+    font-size: 36px;
     font-weight: normal;
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
+
+    @media ${device.laptop}{
+      font-size: 48px;
+      margin-bottom: 4rem;
+    }
   }
 `;
 
@@ -35,28 +44,32 @@ const Text = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.2);
+  background: ${props => props.dark ? 'rgba(0,38,99,0.8)' : 'rgba(0,0,0,0.2)' };
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 0 10vw;
   box-sizing: border-box;
-
 `;
 
 const Note = styled.div`
   font-family: ${props => props.theme.type.sans};
   text-transform: uppercase;
-  font-size: 18px;
-  letter-spacing: 0.3rem;
+  font-size: 16px;
+  letter-spacing: 0.1rem;
+
+  @media ${device.laptop}{
+    font-size: 18px;
+    letter-spacing: 0.3rem;
+  }
 `;
 
-const Quote = (props) => (
-  <Wrapper {...props}>
-    <Text>
+const Quote = ({ image, text, dark}) => (
+  <Wrapper image={image}>
+    <Text dark={dark}>
       <h3>Investment Focus</h3>
-      <h1>{props.text}</h1>
+      <h1>{text}</h1>
       <Note>– CGI Merchant Group</Note>
     </Text>
   </Wrapper>

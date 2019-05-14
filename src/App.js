@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import styled from 'styled-components'
 import { ThemeProvider } from 'styled-components'
 import { Switch, Route } from 'react-router-dom'
 import Header from './components/Header'
@@ -10,9 +11,10 @@ import Market from './pages/Market'
 import SMA from './pages/SMA'
 import Media from './pages/Media'
 import Team from './pages/Team'
+import Contact from './pages/Contact'
 import Portfolio from './pages/Portfolio'
 import SocialImpact from './pages/SocialImpact'
-import TeamMember from './pages/TeamMember'
+import { device } from './utils/devices'
 
 const theme = {
   type: {
@@ -30,23 +32,34 @@ const theme = {
   }
 }
 
+const Main = styled.div`
+  margin-top: 92px;
+
+  @media ${device.laptop}{
+    margin: 0;
+  }
+`;
+
 class App extends Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
         <div className='App'>
           <Header />
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route path='/the-firm' component={TheFirm} />
-            <Route path='/market' component={Market} />
-            <Route path='/fund/portfolio' component={Portfolio} />
-            <Route path='/fund' component={Fund} />
-            <Route path='/sma' component={SMA} />
-            <Route path='/media' component={Media} />
-            <Route path='/social-impact' component={SocialImpact} />
-            <Route exact path='/team' component={Team} />
-          </Switch>
+          <Main>
+            <Switch>
+              <Route exact path='/' component={Home} />
+              <Route path='/the-firm' component={TheFirm} />
+              <Route path='/market' component={Market} />
+              <Route path='/fund/portfolio' component={Portfolio} />
+              <Route path='/fund' component={Fund} />
+              <Route path='/sma' component={SMA} />
+              <Route path='/media' component={Media} />
+              <Route path='/contact' component={Contact} />
+              <Route path='/social-impact' component={SocialImpact} />
+              <Route exact path='/team' component={Team} />
+            </Switch>
+          </Main>
           <Footer />
         </div>
       </ThemeProvider>

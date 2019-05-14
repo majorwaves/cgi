@@ -76,20 +76,6 @@ const Item = styled.li`
     color: ${props => props.theme.color.medium};
     text-decoration: none;
 
-    /* &.active {
-      position: relative;
-
-      &:after {
-        position: absolute;
-        bottom: -40px;
-        content: "";
-        height: 6px;
-        width: 100%;
-        background: ${props => props.theme.color.lightGrey};
-        display: block;
-      }
-    } */
-
     &:hover {
       color: ${props => props.theme.color.light};
     }
@@ -120,77 +106,46 @@ class Nav extends Component {
 
     const firmNav = [
       {
-        title: 'Overview',
+        title: 'About Us',
         url: '/the-firm',
         text: "CGI Merchant Group is a private-equity, alternative investment management firm.",
+        items: [
+          {
+            title: 'Overview',
+            url: '/the-firm',
+            text: 'CGI Merchant Group is a private-equity, alternative investment management firm.'
+          },
+          {
+            title: 'Investment Philosopy',
+            url: '/the-firm#investment-philosophy',
+            text: 'CGI Merchant Group is a private-equity, alternative investment management firm.'
+          },
+          {
+            title: 'Portfolio',
+            url: '/the-firm#portfolio',
+            text: 'CGI Merchant Group is a private-equity, alternative investment management firm.'
+          }
+        ]
       },
       {
-        title: 'Team',
+        title: 'Our Team',
         url: '/team',
         text: "CGI Merchant Group has attracted the most talented and experienced professionals in the industry."
       }
     ]
 
-    const platformNav = [
-      {
-        title: 'Fund I',
-        url: '/fund',
-        text: "High-quality institutional-grade commercial real estate properties with a value-added strategy.",
-        items:[
-          {
-            title: 'Overview',
-            url: '/fund',
-            text: 'High-quality institutional-grade commercial real estate properties with a value-added strategy.'
-          },
-          {
-            title: 'Strategy',
-            url: '/fund#strategy',
-            text: 'Income-driven, targeted, proprietary real estate solutions with low volatility.'
-          },
-          {
-            title: 'Portfolio',
-            url: '/fund/portfolio',
-            text: 'Institutional quality, Class A assets in office and mixed-use properties'
-          }
-        ]
-      },
-      {
-        title: 'SMA',
-        url: '/sma',
-        text: "Right here we'll put the blurb about SMA",
-        items: [
-          {
-            title: 'Overview',
-            url: '/sma/overview'
-          },
-          {
-            title: 'Assets',
-            url: '/sma/assets'
-          },
-        ]
-      }
-    ]
-
     return (
-      <Menu>
+      <Menu open={this.props.open}>
         <ul className='nav main'>
           <Item className='has-subnav'>
             <NavLink to='/the-firm'>The Firm</NavLink>
             <SubNav items={firmNav} />
           </Item>
-          <Item className='has-subnav'>
-            Platforms
-            <SubNav items={platformNav} />
-          </Item>
-          <Item><NavLink to='/market'>Market</NavLink></Item>
           <Item><NavLink to='/social-impact'>Social Impact</NavLink></Item>
           <Item><NavLink to='/media'>Media</NavLink></Item>
-          <Item className='link' onClick={this.handleOpenModal}>Contact</Item>
+          <Item><NavLink to ='/contact'>Contact</NavLink></Item>
           <Item><Search toggleOpen={this.handleSearchOpen} /></Item>
         </ul>
-        <Modal isOpen={this.state.modalOpen} onRequestClose={this.handleOpenModal} contentLabel='Contact' style={customStyles} overlayClassName='Modal_Overlay'>
-          <ContactForm />
-        </Modal>
         <Modal isOpen={this.state.searchOpen} onRequestClose={this.handleSearchOpen} contentLabel='Search' style={customStyles} overlayClassName='Modal_Overlay'>
           <SearchForm />
         </Modal>

@@ -126,7 +126,7 @@ class SubNav extends Component {
                 <Link className='main' onMouseEnter={() => { this.handleHover(index, item.text) }} to={item.url}>
                   {item.title}
                   </Link>
-                  {item.items
+                  {this.props.items[this.state.current].items
                     ?
                       <SubList>
                        {this.props.items[this.state.current].items.map((subItem, index) => {

@@ -5,7 +5,7 @@ import { device } from '../utils/devices'
 
 const Wrapper = styled.button`
   width: 100%;
-  padding: .5rem 1rem;
+  padding: 1rem 2rem;
   font-size: 12px;
   font-weight: 600;
   font-family: ${props => props.theme.type.body};
@@ -21,6 +21,7 @@ const Wrapper = styled.button`
   @media ${device.laptop}{
     display: inline-flex;
     width: fit-content;
+    padding: .5rem 1rem;
   }
 
   &:hover {

@@ -2,12 +2,16 @@ import React from 'react'
 import styled from 'styled-components'
 import Button from './Button'
 import { Link } from 'react-router-dom'
-
+import { device } from '../utils/devices'
 
 const Image = styled.div`
-  height: 500px;
+  height: 200px;
   overflow: hidden;
   transition: 0.2s all ease-in-out;
+
+  @media ${device.laptop}{
+    height: 500px;
+  }
 
   img {
     width: 100%;
@@ -19,6 +23,13 @@ const Image = styled.div`
 
 const Block = styled.div`
   position: relative;
+  margin-bottom: 2rem;
+
+  @media ${device.laptop}{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
 
   &:hover {
     ${Image} {
@@ -31,7 +42,15 @@ const Block = styled.div`
 
 const Info = styled.div`
   background: white;
-  padding: 2rem 3rem;
+  padding: 1rem;
+
+  @media ${device.laptop}{
+    padding: 2rem 3rem;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
   p {
     margin-bottom: 2rem;
@@ -45,18 +64,30 @@ const Title = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  height: 500px;
+  height: 200px;
   pointer-events: none;
   box-sizing: border-box;
   text-align: center;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media ${device.laptop}{
+    height: 500px;
+    display: block;
+  }
 
   h2 {
     font-family: ${props => props.theme.type.heading};
     font-weight: normal;
-    font-size: 60px;
+    font-size: 48px;
     color: white;
     text-transform: uppercase;
+
+    @media ${device.laptop}{
+      font-size: 60px;
+    }
   }
 `;
 

@@ -2,17 +2,22 @@ import React from 'react'
 import styled from 'styled-components'
 import Button from './Button'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
+import { device } from '../utils/devices'
 
 const Wrapper = styled.section`
   position: relative;
   background: black;
-  min-height: 500px;
   overflow: hidden;
+  min-height: 360px;
   background: url(${props => props.bg});
-  background-attachment: fixed;
   background-position: ${props => props.top ? 'top' : 'center 800px'};
   background-size: cover;
+
+  @media ${device.laptop}{
+    min-height: 500px;
+    background-attachment: fixed;
+  }
 
   a {
     text-decoration: none;
@@ -27,7 +32,11 @@ const Wrapper = styled.section`
     height: 100%;
     background: ${props => props.theme.color.medium};
     z-index: 1;
-    mix-blend-mode: multiply;
+    mix-blend-mode: hard-light;
+
+    @media ${device.laptop}{
+      mix-blend-mode: multiply;
+    }
   }
 `;
 
@@ -35,21 +44,29 @@ const Content = styled.div`
   position: absolute;
   top: 0;
   left: 5vw;
-  width: 50vw;
+  width: 90vw;
   box-sizing: border-box;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   z-index: 2;
+
+  @media ${device.laptop}{
+    width: 50vw;
+  }
 `;
 
 const Title = styled.h1`
   color: ${props => props.gradient ? 'black' : 'white' };
-  font-size: 56px;
+  font-size: 30px;
   font-family: ${props => props.theme.type.heading};
   font-weight: 100;
   margin: 0 0 2rem 0;
+
+  @media ${device.laptop}{
+    font-size: 56px;
+  }
 `;
 
 const Hero = ({ video, image, title, subtitle, gradient, buttonText, top}) => (

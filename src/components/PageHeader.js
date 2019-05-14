@@ -1,9 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
+import { device } from '../utils/devices'
 
 const Hero = styled.div`
-  height: 400px;
+  height: 300px;
   position: relative;
+
+  @media ${device.laptop}{
+    height: 400px;
+  }
 
   img {
     width: 100%;
@@ -16,16 +21,25 @@ const Hero = styled.div`
 const Overlay = styled.div`
   position: absolute;
   bottom: 2rem;
-  left: 10vw;
+  left: 5vw;
+  width: 90vw;
+
+  @media ${device.laptop}{
+    width: auto;
+  }
 
   h1 {
-    font-size: 36px;
+    font-size: 30px;
     font-family: ${props => props.theme.type.heading};
     padding: 1rem;
     background: rgba(0,0,0,0.6);
     color: white;
     display: inline-block;
     margin-bottom: 0;
+
+    @media ${device.laptop}{
+      font-size: 36px;
+    }
   }
 
   p {

@@ -22,7 +22,7 @@ const Table = styled.div`
 
 const TableHead = styled.div`
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr 1fr .5fr;
+  grid-template-columns: 1fr 2fr 1fr;
   background: ${props => props.theme.color.lightGrey};
   font-size: 13px;
 
@@ -50,17 +50,16 @@ class Team extends Component {
       <Wrapper>
         <PageHeader
           image={image}
-          title='Leadership'
+          title='Our Team'
         />
         <Table>
           <TableHead>
             <div>Name</div>
             <div>Title</div>
             <div>Business Unit</div>
-            <div>Location</div>
           </TableHead>
           {Object.keys(data).map(person => {
-            const { bio, image, title, name, location, unit } = data[person];
+            const { bio, image, title, name, unit } = data[person];
             return (
               <TeamMember
                 key={person}
@@ -70,7 +69,6 @@ class Team extends Component {
                 bio={bio}
                 unit={unit}
                 selected={this.state.selectedItem === person}
-                location={location}
                 onClick={() => { this.handleClick(person) }}
               />
             )
