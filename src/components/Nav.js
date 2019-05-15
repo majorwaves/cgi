@@ -126,11 +126,6 @@ class Nav extends Component {
             text: 'CGI Merchant Group is a private-equity, alternative investment management firm.'
           }
         ]
-      },
-      {
-        title: 'Our Team',
-        url: '/team',
-        text: "CGI Merchant Group has attracted the most talented and experienced professionals in the industry."
       }
     ]
 
@@ -141,6 +136,7 @@ class Nav extends Component {
             <NavLink to='/the-firm'>The Firm</NavLink>
             <SubNav items={firmNav} />
           </Item>
+          <Item><NavLink to='/team'>Team</NavLink></Item>
           <Item><NavLink to='/social-impact'>Social Impact</NavLink></Item>
           <Item><NavLink to='/media'>Media</NavLink></Item>
           <Item><NavLink to ='/contact'>Contact</NavLink></Item>
