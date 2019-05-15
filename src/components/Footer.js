@@ -107,14 +107,6 @@ class Footer extends Component {
           <p>T: 212-220-4047</p>
           <p>F: 786-523-0590</p>
         </Col>
-        <Col>
-          <h4>Chicago</h4>
-          <p>892 Fairview Road</p>
-          <p>Chicago, Illinois, 60035</p>
-          <br/>
-          <p>T: 312-925-6537</p>
-          <p>F: 786-523-0590</p>
-        </Col>
         <Map>
           <img src={map} alt='map' />
         </Map>

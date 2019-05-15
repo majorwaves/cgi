@@ -89,13 +89,6 @@ class Contact extends Component {
           <p>T: 212-220-4047</p>
           <p>F: 786-523-0590</p>
         </div>
-        <div>
-          <h4>Chicago</h4>
-          <p>892 Fairview Road</p>
-          <p>Chicago, Illinois, 60035</p>
-          <p>T: 312-925-6537</p>
-          <p>F: 786-523-0590</p>
-        </div>
         </Info>
         <Form {...this.props}>
           <h2>Contact Us</h2>
