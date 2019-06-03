@@ -17,7 +17,10 @@ const Wrapper = styled.div`
 const Box = styled.div`
   background: ${props => props.theme.color.dark};
   color: white;
+  display: flex;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 500px 400px;
   grid-template-columns: 500px 400px;
   padding: 1rem 0;
   height: 160px;
@@ -67,6 +70,7 @@ const Info = styled.div`
   color: rgba(255,255,255,0.4);
   text-transform: none !important;
   line-height: 1.6em;
+  -ms-grid-column: 2;
 `;
 
 const SubList = styled.ul`

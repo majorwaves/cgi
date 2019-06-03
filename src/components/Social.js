@@ -39,10 +39,10 @@ const Item = styled.li`
 const Social = (props) => (
   <Wrapper>
     <List>
-      <Item className='twitter'><a target='_blank' rel='noopener noreferrer' href='https://twitter.com/'><FaTwitter color='white' /></a></Item>
+      <Item className='twitter'><a target='_blank' rel='noopener noreferrer' href='https://twitter.com/cgi_mg'><FaTwitter color='white' /></a></Item>
       <Item className='linkedin'><a target='_blank' rel='noopener noreferrer' href='https://www.linkedin.com/company/cgi-merchant-group'><FaLinkedin color='white' /></a></Item>
-      <Item className='facebook'><a target='_blank' rel='noopener noreferrer' href='https://www.facebook.com/pages/CGI-Merchant-Group/1407795199437704'><FaFacebookF color='white' /></a></Item>
-      <Item className='instagram'><a target='_blank' rel='noopener noreferrer' href='https://instagram.com'><FaInstagram color='white' /></a></Item>
+      <Item className='facebook'><a target='_blank' rel='noopener noreferrer' href='https://facebook.com/CGIMerchantGroup'><FaFacebookF color='white' /></a></Item>
+      <Item className='instagram'><a target='_blank' rel='noopener noreferrer' href='https://instagram.com/cgi_mg'><FaInstagram color='white' /></a></Item>
     </List>
   </Wrapper>
 );

@@ -7,6 +7,7 @@ import Social from './Social'
 import { device } from '../utils/devices'
 import { isBrowser } from 'react-device-detect'
 import MobileNav from './MobileNav'
+import { withRouter } from 'react-router-dom'
 
 const Head = styled.header`
   display: grid;
@@ -81,6 +82,7 @@ class Header extends Component {
   render() {
 
     const { navOpen } = this.state;
+    console.log(this.props.match.path)
 
     return (
       <Head>
@@ -96,7 +98,7 @@ class Header extends Component {
               <MobileMenu open={navOpen} onClick={this.handleMenuToggle}>
                 <span /><span /><span />
               </MobileMenu>
-              <MobileNav open={navOpen} />
+              <MobileNav handleClick={this.handleMenuToggle} open={navOpen} />
             </>
         }
       </Head>
@@ -105,4 +107,4 @@ class Header extends Component {
 
 }
 
-export default Header;
+export default withRouter(Header);

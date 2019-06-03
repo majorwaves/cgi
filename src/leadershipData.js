@@ -28,17 +28,19 @@ const data = {
     "name": "Rodolfo Sailbi",
     "title": "Chief Financial Officer",
     "unit": "Executive Committee",
+    "bio": "Rodolfo Slaibi, CPA, has extensive experience in a wide range of leadership, management and advisory positions. In the role of Chief Financial Officer, he provides executives with timely and accurate financial statements, cash management, oversight over accounting and finance operations, as well as design and maintenance of the financial reporting structures. Proficient in general management, business principles and essential business practices, he has advised companies representing several industries including real estate and hospitality, financial services, retail and manufacturing and communications and technology. His success as an advisor to business is built on a foundation of considerable leadership and management experience obtained during his long tenure in public accounting including several years with Big Four and top tier accounting firms."
   },
   "Danielle M. Milota": {
     "name": "Danielle M. Milota",
     "title": "Senior Vice President, Head of Capital Markets and Investor Relations",
     "unit": "Executive Committee",
-    "bio": " Danielle is an accomplished professional with a track record of driving strong business results. Prior to joining CGI, Mrs. Milota was Director of Fixed Income at Credit Suisse Securities (USA) LLC in New York. Danielle was responsible for U.S. Asset Backed Commercial Paper Origination and Head of Short-Term Investor Marketing. During her 13- year tenure at Credit Suisse, Danielle covered financial issuer clients and over 200 institutional investors.  In addition, she sourced and facilitated accessing short term liquidity for the bank.  Prior to her role at Credit Suisse, Ms. Milota was an Associate Producer at the New York Stock Exchange for CNN and CNN Financial News in 2003-04."
+    "bio": " Danielle is an accomplished professional with a track record of driving strong business results. Prior to joining CGI, Mrs. Milota was Director of Fixed Income at Credit Suisse Securities (USA) LLC in New York. Danielle was responsible for U.S. Asset Backed Commercial Paper Origination and Head of Short-Term Investor Marketing. During her 13- year tenure at Credit Suisse, Danielle covered financial issuer clients and over 200 institutional investors.  In addition, she sourced and facilitated accessing short term liquidity for the bank.  Prior to her role at Credit Suisse, Ms. Milota was an Associate Producer at the New York Stock Exchange for CNN and CNN Financial News."
   },
   "Michael Lambie": {
     "name": "Michael Lambie",
     "title": "Vice President, Asset Management",
-    "unit": "Executive Offices",
+    "unit": "Executive Committee",
+    "bio": "Mr. Lambie brings to CGI over 30 years of experience of project management and over 10 years in asset management. He currently manages over 400+ square feet of assets in the South Florida area and has successfully driven all assets to full occupancy. His areas of expertise include resource and risk management, as well as process security and improvement. Mr. Lambie was previously the District Corporate Retail Manager for Walgreens, where he was responsible for working with key stakeholders and overseeing all aspects of the district store’s operations. Mr. Lambie holds a Bachelor of Science in Business Management and Marketing from Kennesaw State University."
   },
   "Juan Yepes": {
     "name": "Juan Yepes",
@@ -58,11 +60,6 @@ const data = {
   "Christian Arrabal": {
     "name": "Christian Arrabal",
     "title": "Finance and Investments Manager",
-    "unit": "Executive Offices",
-  },
-  "Giovanni Barr": {
-    "name": "Giovani Barr",
-    "title": "Financial Analyst",
     "unit": "Executive Offices",
   },
   "Maria Ruiz": {

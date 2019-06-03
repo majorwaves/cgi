@@ -32,7 +32,12 @@ const Wrapper = styled.section`
     height: 100%;
     background: ${props => props.theme.color.medium};
     z-index: 1;
-    mix-blend-mode: hard-light;
+    opacity: .5;
+
+    @supports (mix-blend-mode: multiply) {
+      mix-blend-mode: hard-light;
+      opacity: 1;
+    }
 
     @media ${device.laptop}{
       mix-blend-mode: multiply;

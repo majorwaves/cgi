@@ -19,7 +19,9 @@ const Wrapper = styled.button`
   text-decoration: none;
 
   @media ${device.laptop}{
+    display: inline-block;
     display: inline-flex;
+    width: auto;
     width: fit-content;
     padding: .5rem 1rem;
   }

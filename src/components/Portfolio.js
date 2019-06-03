@@ -2,25 +2,35 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import PortfolioItem from './PortfolioItem'
 import nexus from '../images/logo-nexus.png'
-import nexusImage from '../images/nexus-3.jpg'
+import nexusImage from '../images/nexus-neu.jpg'
 import gabriel from '../images/logo-gabriel.png'
 import gabrielImage from '../images/bakare_0378.jpg'
 import miracle from '../images/logo-miracle.png'
 import miracleImage from '../images/miracle.jpg'
+import { device } from '../utils/devices'
 
 const Grid = styled.section`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+
+  @media ${device.laptop}{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 const Intro = styled.div`
   background: ${props => props.theme.color.dark};
   color: white;
   font-size: 18px;
-  padding: 6rem;
   display: flex;
+  padding: 2rem;
   justify-content: center;
   flex-direction: column;
+
+  @media ${device.laptop}{
+    padding: 6rem;
+  }
 
   h2 {
     font-family: ${props => props.theme.type.heading};
@@ -73,7 +83,7 @@ class Portfolio extends Component {
         />
         <PortfolioItem
           id='miracle'
-          info='Located in the heart of Coral Gables, the mixed-use property is a staple with well-known tenants such as Cibo Wine Bar and UPS. CGI saw significant upside potential in the forthcoming below-market rollovers and an underexposed parking garage.'
+          info='Located in the heart of Coral Gables, the mixed-use property is a staple with well-known tenants such as Cibo Wine Bar and USPS (United States Postal Service). CGI saw significant upside potential in the forthcoming below-market rollovers and an underexposed parking garage.'
           open={this.state.selected === 'miracle'}
           handleClick={this.handleClick}
           logo={miracle}

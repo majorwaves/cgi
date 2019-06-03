@@ -16,7 +16,10 @@ const Assets = styled.div`
   padding: 1rem;
 
   @media ${device.laptop}{
+    display: -ms-grid;
+    justify-content: space-between;
     display: grid;
+    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
   }
@@ -38,6 +41,7 @@ class Home extends Component {
             />
             <Assets>
               <Asset
+                className='first'
                 title='Fund I'
                 city='Miami'
                 image={fund}
@@ -49,7 +53,7 @@ class Home extends Component {
                 city='Miami'
                 image={sma}
                 url='/the-firm'
-                description="Since 2006, CGI has acquired and invested in real-estate and real-estate related assets. CGI contracted over $400MM in assets under management across multiple assets classes including hotel and hospitality, executive offices, mixed-use and retail space. CGI increases the value of its assets on commercial real estate and infrastructure investments and transforms them into Class A, fully operational properties."
+                description="Since 2006, CGI has acquired and invested in real-estate and real-estate related assets through its separately managed account (the SMA platform). CGI has executed and transacted over $1 BN across multiple asset classes including hotel and hospitality, executive offices, mixed-use and retail space. CGI increases the value of its assets on commercial real estate and infrastructure investments and transforms them into Class A, fully operational properties."
               />
             </Assets>
           </Main>

@@ -23,7 +23,19 @@ const Image = styled.div`
 
 const Block = styled.div`
   position: relative;
-  margin-bottom: 2rem;
+  margin: 0 0 2rem 0;
+
+  &:first-of-type{
+    margin-right: 1rem;
+
+    @supports (display: grid) {
+      margin-right: 0;
+    }
+  }
+
+  &:nth-of-type(2n){
+    -ms-grid-column: 2;
+  }
 
   @media ${device.laptop}{
     margin: 0;
@@ -43,11 +55,16 @@ const Block = styled.div`
 const Info = styled.div`
   background: white;
   padding: 1rem;
+  height: 240px;
+
+  @supports (display: grid) {
+    height: auto;
+  }
 
   @media ${device.laptop}{
     padding: 2rem 3rem;
     display: flex;
-    flex: 1;
+    flex: 1 1 auto;
     flex-direction: column;
     justify-content: space-between;
   }

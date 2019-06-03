@@ -1,24 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
-import Modal from 'react-modal'
-import ContactForm from './ContactForm'
 import navMarker from '../images/nav-marker.svg'
 import Search from './Search'
-import SearchForm from './SearchForm'
-
-const customStyles = {
-  content : {
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)',
-    zIndex                : '10',
-    cursor                : 'auto'
-  }
-};
 
 const Menu = styled.div`
   height: auto;
@@ -107,23 +91,16 @@ class MobileNav extends Component {
 
     return (
       <Menu open={this.props.open}>
-        <Nav>
+        <Nav onClick={this.props.handleClick}>
           <Item className='has-subnav'>
             <NavLink to='/the-firm'>The Firm</NavLink>
           </Item>
           <Item><NavLink to='/team'>Team</NavLink></Item>
-          <Item><NavLink to='/market'>Market</NavLink></Item>
           <Item><NavLink to='/social-impact'>Social Impact</NavLink></Item>
           <Item><NavLink to='/media'>Media</NavLink></Item>
-          <Item className='link' onClick={this.handleOpenModal}>Contact</Item>
+          <Item><NavLink to ='/contact'>Contact</NavLink></Item>
           <Item><Search toggleOpen={this.handleSearchOpen} /></Item>
         </Nav>
-        <Modal isOpen={this.state.modalOpen} onRequestClose={this.handleOpenModal} contentLabel='Contact' style={customStyles} overlayClassName='Modal_Overlay'>
-          <ContactForm />
-        </Modal>
-        <Modal isOpen={this.state.searchOpen} onRequestClose={this.handleSearchOpen} contentLabel='Search' style={customStyles} overlayClassName='Modal_Overlay'>
-          <SearchForm />
-        </Modal>
       </Menu>
     );
   }

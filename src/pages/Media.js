@@ -2,22 +2,50 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import PageHeader from '../components/PageHeader'
 import image from '../images/media.jpg'
+import { device } from '../utils/devices'
+import Helmet from 'react-helmet'
 
 const Wrapper = styled.div`
 `;
 
 const Grid = styled.div`
-  width: 90vw;
-  padding: 4rem;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2rem;
+  padding: 1rem;
   background: ${props => props.theme.color.bg};
+
+  @media ${device.laptop}{
+    display: flex;
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    padding: 4rem;
+  }
 `;
 
 const Article = styled.div`
   background: white;
+  margin-bottom: 2rem;
+  width: 28vw;
+  margin-right: 2rem;
+
+  @supports (display: grid){
+    width: auto;
+    margin-right: 0;
+  }
+
+  @media ${device.laptop}{
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+
+    @supports (display: grid){
+      margin: 0;
+    }
+  }
+
+  &:nth-of-type(3n){
+    margin-right: 0;
+  }
 
   a {
     text-decoration: none;
@@ -53,11 +81,19 @@ class Media extends Component {
   render() {
     return (
       <Wrapper>
+        <Helmet title='CGI | Media' />
         <PageHeader
           image={image}
           title='Media'
         />
         <Grid>
+
+          <Article>
+            <a target="_blank" rel="noreferrer noopener" href="https://www.bizjournals.com/southflorida/potmsearch/detail/submission/6468322/Danielle_Milota">
+            <h2>CGI Merchant Group LLC (CGI) Names Danielle Milota as Senior Vice  President, Head of Capital Markets and Investor Relations</h2>
+            <div><span>May 8, 2019</span><span>South Florida Business Journals</span></div>
+            </a>
+          </Article>
 
           <Article>
             <a target="_blank" rel="noreferrer noopener" href="https://therealdeal.com/miami/2019/04/24/this-co-working-company-opened-two-offices-in-palm-beach-county/">

@@ -21,13 +21,23 @@ const Table = styled.div`
 `;
 
 const TableHead = styled.div`
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 2fr 1fr;
   grid-template-columns: 1fr 2fr 1fr;
   background: ${props => props.theme.color.lightGrey};
   font-size: 13px;
 
   div {
     padding: 1rem .5rem;
+
+    &:nth-of-type(2){
+      -ms-grid-column: 2;
+    }
+
+    &:nth-of-type(3){
+      -ms-grid-column: 3;
+    }
   }
 `;
 

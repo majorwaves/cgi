@@ -2,11 +2,8 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 import Modal from 'react-modal'
-import ContactForm from './ContactForm'
 import SubNav from './SubNav'
 import navMarker from '../images/nav-marker.svg'
-import Search from './Search'
-import SearchForm from './SearchForm'
 
 const customStyles = {
   content : {
@@ -38,7 +35,7 @@ const Menu = styled.nav`
     justify-content: space-between;
     position: relative;
     width: 40vw;
-    min-width: 700px;
+    min-width: 440px;
   }
 `;
 
@@ -98,7 +95,6 @@ class Nav extends Component {
   }
 
   handleSearchOpen = () => {
-    console.log('hey')
     this.setState({ searchOpen: !this.state.searchOpen })
   }
 
@@ -117,7 +113,7 @@ class Nav extends Component {
           },
           {
             title: 'Investment Philosopy',
-            url: '/the-firm#investment-philosophy',
+            url: '/the-firm#philosophy',
             text: 'CGI Merchant Group is a private-equity, alternative investment management firm.'
           },
           {
@@ -139,12 +135,8 @@ class Nav extends Component {
           <Item><NavLink to='/team'>Team</NavLink></Item>
           <Item><NavLink to='/social-impact'>Social Impact</NavLink></Item>
           <Item><NavLink to='/media'>Media</NavLink></Item>
-          <Item><NavLink to ='/contact'>Contact</NavLink></Item>
-          <Item><Search toggleOpen={this.handleSearchOpen} /></Item>
+          <Item><NavLink to='/contact'>Contact</NavLink></Item>
         </ul>
-        <Modal isOpen={this.state.searchOpen} onRequestClose={this.handleSearchOpen} contentLabel='Search' style={customStyles} overlayClassName='Modal_Overlay'>
-          <SearchForm />
-        </Modal>
       </Menu>
     );
   }

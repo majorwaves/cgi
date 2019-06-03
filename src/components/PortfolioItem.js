@@ -1,21 +1,27 @@
 import React from 'react'
 import styled from 'styled-components'
 import {FaGlobeAmericas, FaTimes, FaExternalLinkAlt} from 'react-icons/fa'
+import { device } from '../utils/devices'
+import { isBrowser } from 'react-device-detect'
 
 const Main = styled.div`
-  width: ${props => props.open ? '50vw !important' : '25vw' };
+  width: ${props => props.open ? '100vw !important' : '50vw' };
   transition: 1s all ease-in-out;
+
+  @media ${device.laptop}{
+    width: ${props => props.open ? '50vw !important' : '25vw' };
+  }
 `;
 
 const Sidebar = styled.div`
   position: absolute;
   top: 0;
-  right: -5vw;
+  right: -10vw;
   height: 100%;
   background: ${props => props.theme.color.medium};
   color: white;
   will-change: transform;
-  transform: ${props => props.open ? 'translate(-5vw, 0)' : 'translate(0,0)' };
+  transform: ${props => props.open ? 'translate(-10vw, 0)' : 'translate(0,0)' };
   z-index: 2;
   width: 5vw;
   transition: 1s all ease-in-out;
@@ -24,6 +30,11 @@ const Sidebar = styled.div`
   flex-direction: column;
   box-sizing: border-box;
   align-items: center;
+
+  @media ${device.laptop}{
+    right: -5vw;
+    transform: ${props => props.open ? 'translate(-5vw, 0)' : 'translate(0,0)' };
+  }
 
   div {
     margin-bottom: 1rem;
@@ -63,31 +74,60 @@ const Side = styled.div`
 const Asset = styled.div`
   display: flex;
   justify-content: space-between;
-  height: 25vw;
+  height: 70vh;
   cursor: ${props => props.open ? 'auto' : 'pointer' };
   overflow: hidden;
   position: relative;
 
-  &:nth-of-type(4n-1), &:nth-of-type(4n){
-    flex-direction: row-reverse;
+  @media ${device.device}{
+    &:nth-of-type(2n){
+      flex-direction: row-reverse;
 
-    ${Side}{
-      &:after {
-        left: auto;
-        right: 0;
-        border-left: 0;
-        border-right: 30px solid white;
+      ${Side}{
+        &:after {
+          left: auto;
+          right: 0;
+          border-left: 0;
+          border-right: 30px solid white;
+        }
       }
     }
   }
 
-  &:hover {
-    ${Main} {
-      width: 28vw;
+  @media ${device.laptop}{
+    height: 25vw;
+
+    &:nth-of-type(4n-1), &:nth-of-type(4n){
+      flex-direction: row-reverse;
+
+      ${Side}{
+        &:after {
+          left: auto;
+          right: 0;
+          border-left: 0;
+          border-right: 30px solid white;
+        }
+      }
     }
 
-    ${Side} {
-      width: 22vw;
+    &:nth-of-type(2n){
+      -ms-grid-column: 2;
+    }
+
+    &:nth-of-type(3), &:nth-of-type(4){
+      -ms-grid-row: 2;
+    }
+  }
+
+  &:hover {
+    @media ${device.laptop}{
+      ${Main} {
+        width: 28vw;
+      }
+
+      ${Side} {
+        width: 22vw;
+      }
     }
   }
 `;
@@ -98,10 +138,16 @@ const Logo = styled.div`
   justify-content: center;
   position: relative;
   transition: 1s all ease-in-out;
-  width: ${props => props.open ? '15vw' : '100%' };
-  height: ${props => props.open ? '10vw' : '100%' };
-  padding: 2rem;
+  width: ${props => props.open ? '140px' : '100%' };
+  height: ${props => props.open ? '140px' : '100%' };
   box-sizing: border-box;
+  padding: 0 1rem;
+
+  @media ${device.laptop}{
+    padding: 2rem;
+    width: ${props => props.open ? '15vw' : '100%' };
+    height: ${props => props.open ? '10vw' : '100%' };
+  }
 
   img {
     width: 100%;
@@ -110,13 +156,24 @@ const Logo = styled.div`
 
 const Info = styled.div`
   color: rgba(0,0,0,0.7);
-  padding: 2rem;
-  width: calc(100% - 5vw);
+  padding: 0 1rem;
+  font-size: 14px;
+  width: calc(100% - 5vw - 2rem);
   box-sizing: border-box;
   transition: .2s all ease-in-out;
   opacity: ${props => props.open ? '1' : '0' };
   transition-delay: 1s;
   transform: ${props => props.open ? 'translate(0,0)' : 'translate(0,1rem)' };
+
+  @media ${device.laptop}{
+    padding: 1rem;
+    font-size: 16px;
+    width: calc(100% - 5vw);
+  }
+
+  p {
+    margin-top: 0;
+  }
 
   a {
     color: ${props => props.theme.color.medium};
@@ -160,11 +217,11 @@ const PortfolioItem = ({ id, info, logo, image, title, link, selected, open, han
     </Side>
     <Sidebar open={open}>
       <div>
-        <FaTimes size={36} onClick={() => handleClick('')} />
+        <FaTimes size={isBrowser ? 36 : 18} onClick={() => handleClick('')} />
       </div>
       {link &&
         <div>
-          <a href={link} target="_blank" rel="noreferrer noopener"><FaGlobeAmericas size={36} /></a>
+          <a href={link} target="_blank" rel="noreferrer noopener"><FaGlobeAmericas size={isBrowser ? 36 : 18} /></a>
         </div>
       }
     </Sidebar>

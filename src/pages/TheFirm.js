@@ -10,15 +10,16 @@ import ReactPlayer from 'react-player'
 import Modal from 'react-modal'
 import { withRouter } from 'react-router-dom'
 import Portfolio from '../components/Portfolio'
+import Helmet from 'react-helmet'
 
 const customStyles = {
   content : {
     top                   : '50%',
-    left                  : '50%',
+    left                  : 'calc(10vw - 1rem)',
     right                 : 'auto',
     bottom                : 'auto',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
+    width                 : '80vw',
+    transform             : 'translate(0, -50%)'
   }
 };
 
@@ -28,7 +29,13 @@ const Wrapper = styled.div`
 
 const Section = styled.section`
   width: 85vw;
-  margin: 4rem auto;
+  padding: 2rem 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @media ${device.laptop}{
+    padding: 4rem;
+  }
 
   .video {
     position: relative;
@@ -58,9 +65,11 @@ const Section = styled.section`
 
   @media ${device.laptop}{
     width: 80vw;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 5vw;
+    grid-column-gap: 5vw;
   }
 
   div {
@@ -70,11 +79,23 @@ const Section = styled.section`
       margin: 0;
     }
 
+    &:nth-of-type(2n){
+      -ms-grid-column: 2;
+      margin-left: 5vw;
+
+      @supports (display: grid){
+        margin-left: 0;
+      }
+    }
+
     img {
       width: 100%;
       height: 100%;
-      height: 50vw;
       object-fit: cover;
+
+      @media ${device.laptop}{
+        height: 340px;
+      }
     }
   }
 
@@ -156,11 +177,11 @@ class TheFirm extends Component {
   }
 
   componentDidUpdate(prevProps){
-    if(this.props.location.hash !== prevProps.location.hash){
+    if(this.props.location.hash){
       const hash = this.props.location.hash.replace("#", "");
       if(hash !== ""){
         const target = document.getElementById(hash)
-        target.scrollIntoView({block: 'center', behavior: 'smooth'})
+        target.scrollIntoView({block: 'start', behavior: 'smooth'})
       }
     }
   }
@@ -168,6 +189,31 @@ class TheFirm extends Component {
   render(){
     return (
       <Wrapper>
+        <Helmet title='CGI | Social Impact'>
+          <meta property="og:title" content="CGI | The Firm" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="http://cgiimg.com/the-firm" />
+          <meta property="og:image" content={image3} />
+          <meta property="og:description" content="CGI Merchant Group (“CGI”) is a private equity, alternative investment management that focuses on real estate value-added investment opportunities in the U.S. Through strategic and effective management and financing, CGI increases the value of its assets on commercial real estate and infrastructure investments and transforms them into Class A, fully-operational assets. The Firm has a wealth of knowledge on capital markets – which combined with their ingenuity and experience – distinguishes them from other alternative investment managers." />
+          <script type="application/ld+json">{`
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "url": "http://cgimg.com",
+              "name": "CGI Merchant Group",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-786-581-4800",
+                "contactType": "Head Office"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "emai;": "investor@cgimg.com",
+                "contactType": "Investor Contact"
+              }
+            }
+          `}</script>
+        </Helmet>
         <PageHeaderSlider
           image={image}
           secondImage={image4}
@@ -179,11 +225,11 @@ class TheFirm extends Component {
             <h1 className='large'>Who We Are</h1>
             <p>CGI Merchant Group (“CGI”) is a private equity, alternative investment management that focuses on real estate value-added investment opportunities in the U.S. Through strategic and effective management and financing, CGI increases the value of its assets on commercial real estate and infrastructure investments and transforms them into Class A, fully-operational assets. The Firm has a wealth of knowledge on capital markets – which combined with their ingenuity and experience – distinguishes them from other alternative investment managers.</p>
           </div>
-          <div className='video'>
+          <div>
             <img src={image3} alt='miracle mile' />
           </div>
         </Section>
-        <Section id='investment-philosophy'>
+        <Section id='philosophy'>
           <div>
             <h4>Contrarian Views</h4>
             <h1>Investment Philosophy</h1>
@@ -198,6 +244,7 @@ class TheFirm extends Component {
         <Modal isOpen={this.state.modalOpen} onRequestClose={this.handleClick} style={customStyles}>
           <ReactPlayer
             playing
+            className='video_wrapper'
             controls
             url='https://www.youtube.com/watch?v=2NyfzVzGSUg'
           />

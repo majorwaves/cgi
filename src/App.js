@@ -6,15 +6,13 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import TheFirm from './pages/TheFirm'
-import Fund from './pages/Fund'
-import Market from './pages/Market'
-import SMA from './pages/SMA'
 import Media from './pages/Media'
 import Team from './pages/Team'
+import Foundation from './pages/Foundation'
 import Contact from './pages/Contact'
-import Portfolio from './pages/Portfolio'
 import SocialImpact from './pages/SocialImpact'
 import { device } from './utils/devices'
+import './App.css'
 
 const theme = {
   type: {
@@ -50,14 +48,11 @@ class App extends Component {
             <Switch>
               <Route exact path='/' component={Home} />
               <Route path='/the-firm' component={TheFirm} />
-              <Route path='/market' component={Market} />
-              <Route path='/fund/portfolio' component={Portfolio} />
-              <Route path='/fund' component={Fund} />
-              <Route path='/sma' component={SMA} />
               <Route path='/media' component={Media} />
               <Route path='/contact' component={Contact} />
               <Route path='/social-impact' component={SocialImpact} />
               <Route exact path='/team' component={Team} />
+              <Route exact path='/foundation' component={Foundation} />
             </Switch>
           </Main>
           <Footer />
