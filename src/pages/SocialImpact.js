@@ -213,8 +213,8 @@ class SocialImpact extends Component {
             <img src={foundation} alt='woman' />
             <img src={foundationLogo} class='alycia' alt='Isabella Alycia' />
             <Callout>
-                <h2>The Story of Isabela Alycia</h2>
-                <p>Read about Isabela Alycia and her plans to fulfil her grandmother’s legacy</p>
+                <h2>The Story of Isabella Alycia</h2>
+                <p>Read about Isabella Alycia and her plans to fulfil her grandmother’s legacy</p>
                 <button>Read Now</button>
             </Callout>
             </Link>
@@ -224,12 +224,12 @@ class SocialImpact extends Component {
           <div>
             <h4>Commited to Our</h4>
             <h1>Alliance & Scholars Program</h1>
-            <p>In 2019, CGI announced the Isabela Alycia Foundation to focus on providing underprivileged students and single mothers with the knowledge and resources needed to improve their world. Through strategic partnerships, the Foundation develops holistic programs that generate economic growth opportunities, improve health, and cultivate wellness.</p>
+            <p>In 2019, CGI announced the Isabella Alycia Foundation to focus on providing underprivileged students and single mothers with the knowledge and resources needed to improve their world. Through strategic partnerships, the Foundation develops holistic programs that generate economic growth opportunities, improve health, and cultivate wellness.</p>
           </div>
           <div>
             <h4>Commited to</h4>
             <h1>Supporting Families</h1>
-            <p>Building on the work of the late Alice Thomas, The Isabela Alycia Foundation is designed to make a real difference in the lives for underprivileged students and single mothers. By working directly and with strategic partners, the goal of CGI is to capitalize on our expert resources to get the best results within the Alliance & Scholars Program.</p>
+            <p>Building on the work of the late Alice Thomas, The Isabella Alycia Foundation is designed to make a real difference in the lives for underprivileged students and single mothers. By working directly and with strategic partners, the goal of CGI is to capitalize on our expert resources to get the best results within the Alliance & Scholars Program.</p>
           </div>
         </Section>
         <Modal isOpen={this.state.modalOpen} onRequestClose={this.handleClick} style={customStyles}>

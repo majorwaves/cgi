@@ -41,6 +41,29 @@ const Extra = styled.div`
   font-size: 13px;
   padding: 1rem;
   line-height: 1.5em;
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  grid-gap: 2rem;
+
+  h3 {
+    font-size: 18px;
+    margin: 0 0 .5rem;
+  }
+
+  h3, h4 {
+    font-weight: normal;
+    font-family: ${props => props.theme.type.heading};
+  }
+
+  h4 {
+    font-style: italic;
+    font-size: 16px;
+    margin: 0 0 1rem;
+  }
+
+  img {
+    width: 100%;
+  }
 `;
 
 const TeamMember = ({ name, title, image, onClick, bio, unit, excerpt, selected }) => (
@@ -52,7 +75,14 @@ const TeamMember = ({ name, title, image, onClick, bio, unit, excerpt, selected 
     </Row>
     {selected &&
       <Extra>
-        {bio}
+        <div>
+          <img src={image} alt={name} />
+        </div>
+        <div>
+          <h3>{name}</h3>
+          <h4>{title}</h4>
+          {bio}
+        </div>
       </Extra>
     }
   </Person>

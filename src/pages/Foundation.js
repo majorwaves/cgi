@@ -45,8 +45,8 @@ class Foundation extends Component {
         <PageHeaderSlider
           image={image}
           secondImage={image2}
-          title='By Isabela Alycia'
-          text='The story of the Isabela Alycia Foundation is about empowering students and mothers'
+          title='By Isabella Alycia'
+          text='The story of the Isabella Alycia Foundation is about empowering students and mothers'
         />
         <Grid>
           <div>

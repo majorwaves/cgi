@@ -96,9 +96,23 @@ class Media extends Component {
           </Article>
 
           <Article>
+            <a target="_blank" rel="noreferrer noopener" href="https://www.globest.com/2019/05/03/cgi-merchant-adds-nearly-60000-sf-of-co-working-space-in-boca-raton-and-boynton-beach/?slreturn=20190502230829">
+            <h2>CGI Merchant Adds Nearly 60,000 SF of Co-Working Space in Boca Raton and Boynton Beach</h2>
+            <div><span>May 3, 2019</span><span>GlobeSt</span></div>
+            </a>
+          </Article>
+
+          <Article>
             <a target="_blank" rel="noreferrer noopener" href="https://therealdeal.com/miami/2019/04/24/this-co-working-company-opened-two-offices-in-palm-beach-county/">
             <h2>This co-working company opened two offices in Palm Beach County</h2>
             <div><span>April 24, 2019</span><span>The Real Deal</span></div>
+            </a>
+          </Article>
+
+          <Article>
+            <a target="_blank" rel="noreferrer noopener" href="https://finance.yahoo.com/news/cgi-merchant-group-expands-nexus-155600266.html">
+            <h2>CGI Merchant Group Expands The Nexus Portfolio to Include Two Additional Co-Working Spaces in Boynton Beach and Boca Raton</h2>
+            <div><span>April 23, 2019</span><span>Yahoo! Finance</span></div>
             </a>
           </Article>
 
@@ -109,19 +123,6 @@ class Media extends Component {
             </a>
           </Article>
 
-          <Article>
-            <a target="_blank" rel="noreferrer noopener" href="https://therealdeal.com/miami/tag/cgi-merchant-group/">
-            <h2>Photos: On the scene at ribbon cutting of 55 Miracle Mile</h2>
-            <div><span>Jun 30, 2015</span><span>The Real Deal, South FL Real Estate News</span></div>
-            </a>
-          </Article>
-
-          <Article>
-            <a target="_blank" rel="noreferrer noopener" href="https://www.law.com/dailybusinessreview/almID/1202729582207/Whats-Driving-CGI-Merchant-Group-Investments-in-South-Florida-Real-Estate/?slreturn=20190227102204">
-            <h2>What's Driving CGI Merchant Group Investment is South FL Real Estate?</h2>
-            <div><span>Jun 16, 2015</span><span>DBR Daily Business Review</span></div>
-            </a>
-          </Article>
           <Article>
             <a target="_blank" rel="noreferrer noopener" href="https://www.bizjournals.com/southflorida/print-edition/2015/05/22/raoul-thomas-on-finding-value-where-others-can-t.html">
             <h2>Raoul Thomas on finding value where others can’t</h2>

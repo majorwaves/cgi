@@ -223,7 +223,7 @@ class TheFirm extends Component {
         <Section>
           <div>
             <h1 className='large'>Who We Are</h1>
-            <p>CGI Merchant Group (“CGI”) is a private equity, alternative investment management that focuses on real estate value-added investment opportunities in the U.S. Through strategic and effective management and financing, CGI increases the value of its assets on commercial real estate and infrastructure investments and transforms them into Class A, fully-operational assets. The Firm has a wealth of knowledge on capital markets – which combined with their ingenuity and experience – distinguishes them from other alternative investment managers.</p>
+            <p>CGI Merchant Group (“CGI”) is a private equity, alternative investment management firm that focuses on real estate value-added investment opportunities in the U.S. Through strategic and effective management and financing, CGI increases the value of its assets on commercial real estate and infrastructure investments and transforms them into Class A, fully-operational assets. The Firm has a wealth of knowledge on capital markets – which combined with their ingenuity and experience – distinguishes them from other alternative investment managers.</p>
           </div>
           <div>
             <img src={image3} alt='miracle mile' />

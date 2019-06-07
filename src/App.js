@@ -7,8 +7,8 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import TheFirm from './pages/TheFirm'
 import Media from './pages/Media'
-import Team from './pages/Team'
 import Foundation from './pages/Foundation'
+import Team from './pages/Team'
 import Contact from './pages/Contact'
 import SocialImpact from './pages/SocialImpact'
 import { device } from './utils/devices'
@@ -50,9 +50,9 @@ class App extends Component {
               <Route path='/the-firm' component={TheFirm} />
               <Route path='/media' component={Media} />
               <Route path='/contact' component={Contact} />
+              <Route path='/foundation' component={Foundation} />
               <Route path='/social-impact' component={SocialImpact} />
               <Route exact path='/team' component={Team} />
-              <Route exact path='/foundation' component={Foundation} />
             </Switch>
           </Main>
           <Footer />
