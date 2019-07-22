@@ -1,15 +1,11 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import PageHeaderSlider from '../components/PageHeaderSlider'
-import image from '../images/firm-slider-one.jpg'
-import Quote from '../components/Quote'
-import image3 from '../images/firm-right-neu-neu.jpg'
-import image4 from '../images/firm-slider-two-neu.jpg'
+import PageHeader from '../components/PageHeader'
+import image from '../images/biscayne.jpg'
 import { device } from '../utils/devices'
 import ReactPlayer from 'react-player'
 import Modal from 'react-modal'
 import { withRouter } from 'react-router-dom'
-import Portfolio from '../components/Portfolio'
 import Helmet from 'react-helmet'
 
 const customStyles = {
@@ -25,6 +21,50 @@ const customStyles = {
 
 const Wrapper = styled.div`
 
+`;
+
+const Intro = styled.div`
+  width: 85vw;
+  margin: 0 auto 0;
+  padding: 0 0 2rem;
+  box-sizing: border-box;
+
+  strong {
+    font-weight: 500;
+  }
+
+  @media ${device.laptop}{
+    width: 80vw;
+    padding: 4rem 4rem 0;
+  }
+
+  p {
+    line-height: 1.8em;
+    font-size: 1.25rem;
+    color: rgb(51,51,51);
+  }
+
+  h1 {
+    font-family: ${props => props.theme.type.heading};
+    font-size: 30px;
+    font-weight: normal;
+    margin-top: 0;
+    text-align: center;
+
+    @media ${device.laptop}{
+      text-align: left;
+      font-size: 36px;
+    }
+
+    &.large {
+      font-size: 36px;
+      margin-top: 0;
+
+      @media ${device.laptop}{
+        font-size: 48px;
+      }
+    }
+  }
 `;
 
 const Section = styled.section`
@@ -193,7 +233,7 @@ class TheFirm extends Component {
           <meta property="og:title" content="CGI | The Firm" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="http://cgiimg.com/the-firm" />
-          <meta property="og:image" content={image3} />
+          <meta property="og:image" content={image} />
           <meta property="og:description" content="CGI Merchant Group (“CGI”) is a private equity, alternative investment management that focuses on real estate value-added investment opportunities in the U.S. Through strategic and effective management and financing, CGI increases the value of its assets on commercial real estate and infrastructure investments and transforms them into Class A, fully-operational assets. The Firm has a wealth of knowledge on capital markets – which combined with their ingenuity and experience – distinguishes them from other alternative investment managers." />
           <script type="application/ld+json">{`
             {
@@ -214,31 +254,34 @@ class TheFirm extends Component {
             }
           `}</script>
         </Helmet>
-        <PageHeaderSlider
+        <PageHeader
+          top
+          darken={20}
           image={image}
-          secondImage={image4}
           title='The Firm'
           text=' Investment Management with Experience and Ingenuity'
         />
-        <Section>
+        <Intro>
           <div>
-            <h1 className='large'>Who We Are</h1>
-            <p>CGI Merchant Group (“CGI”) is a private equity, alternative investment management firm that focuses on real estate value-added investment opportunities in the U.S. Through strategic and effective management and financing, CGI increases the value of its assets on commercial real estate and infrastructure investments and transforms them into Class A, fully-operational assets. The Firm has a wealth of knowledge on capital markets – which combined with their ingenuity and experience – distinguishes them from other alternative investment managers.</p>
+            <p><strong>CGI Merchant Group (“CGI”)</strong> is a private equity, alternative investment management firm that focuses on real estate value-added investment opportunities in the U.S.</p>
+            <p>Through strategic management and effective financing, CGI increases the value of its commercial real estate.</p>
+            <p>CGI transforms its holdings into Class A, fully-operational assets.</p>
+            <p>The Firm has a wealth of knowledge on capital markets – which combined with ingenuity and experience – distinguishes it from other alternative investment managers.</p>
           </div>
-          <div>
-            <img src={image3} alt='miracle mile' />
-          </div>
-        </Section>
+        </Intro>
         <Section id='philosophy'>
           <div>
             <h4>Contrarian Views</h4>
             <h1>Investment Philosophy</h1>
-            <p>At CGI, the focus is to remain nimble, execution-minded and in a position to create value where others may not. The Firm relies on strategic alliances, operating partnerships and third-party consultants to remain agile, while preserving scalability. CGI implements “best-industry practices” and engages in “hands-on” asset management techniques to ensure all investment portfolios and its inherent risks are managed in an optimal manner.</p>
+            <p>At CGI, our focus is to remain nimble, execution-minded and in a position to create value.</p>
+            <p>The Firm relies on strategic alliances, operating partnerships and third-party consultants to remain agile, while preserving scalability.</p>
+            <p>CGI implements best-industry practices and engages in hands-on asset management techniques to ensure all investment portfolios and inherent risks are optimally managed.</p>
           </div>
           <div>
             <h4>Remaining Nimble</h4>
             <h1>Creating Value</h1>
-            <p>The firm’s nimble team, deep industry knowledge, and international network is positioned to create unique real estate opportunities that produce superior returns for stakeholders. Through this work, CGI Merchant Group has built a distinct culture; based upon contrarian views and an entrepreneurial approach to achieve exceptional long-term value for every client and community serve.</p>
+            <p>The Firm’s nimble team, deep industry knowledge, and international network position CGI to create unique real estate opportunities that produce superior returns for stakeholders.</p>
+            <p>Through this work, CGI Merchant Group has built a distinct culture based upon contrarian views and an entrepreneurial approach to achieve exceptional long-term value for every client and community served.</p>
           </div>
         </Section>
         <Modal isOpen={this.state.modalOpen} onRequestClose={this.handleClick} style={customStyles}>
@@ -249,8 +292,6 @@ class TheFirm extends Component {
             url='https://www.youtube.com/watch?v=2NyfzVzGSUg'
           />
         </Modal>
-        <Quote dark text='“We believe in a contrarian, value-oriented approach to real estate investing”' />
-        <Portfolio id="portfolio" />
       </Wrapper>
     )
   }

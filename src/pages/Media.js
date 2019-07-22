@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import PageHeader from '../components/PageHeader'
-import image from '../images/media.jpg'
+import image from '../images/media-alt.jpg'
 import { device } from '../utils/devices'
 import Helmet from 'react-helmet'
 
@@ -84,9 +84,17 @@ class Media extends Component {
         <Helmet title='CGI | Media' />
         <PageHeader
           image={image}
+          darken={10}
           title='Media'
         />
         <Grid>
+
+          <Article>
+            <a target="_blank" rel="noreferrer noopener" href="https://www.globest.com/2019/06/24/cgi-merchant-acquires-coral-gables-office-building-fir-54m/">
+              <h2>CGI Merchant Group Acquires South Florida Landmark Property 550 Biltmore Way</h2>
+              <div><span>June 24, 2019</span><span>GlobeSt</span></div>
+            </a>
+          </Article>
 
           <Article>
             <a target="_blank" rel="noreferrer noopener" href="https://www.bizjournals.com/southflorida/potmsearch/detail/submission/6468322/Danielle_Milota">
@@ -104,7 +112,7 @@ class Media extends Component {
 
           <Article>
             <a target="_blank" rel="noreferrer noopener" href="https://therealdeal.com/miami/2019/04/24/this-co-working-company-opened-two-offices-in-palm-beach-county/">
-            <h2>This co-working company opened two offices in Palm Beach County</h2>
+            <h2>This Co-working Company Opened Two Offices in Palm Beach County</h2>
             <div><span>April 24, 2019</span><span>The Real Deal</span></div>
             </a>
           </Article>
@@ -120,27 +128,6 @@ class Media extends Component {
             <a target="_blank" rel="noreferrer noopener" href="https://www.businesswire.com/news/home/20180725005140/en/CGI-Successfully-Completes-Refinancing-Class-A-Properties-South">
             <h2>CGI Successfully Completes Refinancing of Four Class-A Properties in South Florida</h2>
             <div><span>July 25, 2018</span><span>Business Wire</span></div>
-            </a>
-          </Article>
-
-          <Article>
-            <a target="_blank" rel="noreferrer noopener" href="https://www.bizjournals.com/southflorida/print-edition/2015/05/22/raoul-thomas-on-finding-value-where-others-can-t.html">
-            <h2>Raoul Thomas on finding value where others can’t</h2>
-            <div><span>May 22, 2015</span><span>South Florida Business Journal</span></div>
-            </a>
-          </Article>
-
-          <Article>
-            <a target="_blank" rel="noreferrer noopener" href="https://www.cpexecutive.com/post/executive-spotlight-raoul-thomas-cgi-merchant-group/">
-            <h2>Executive Spotlight: Raoul Thomas, CGI Merchant Group</h2>
-            <div><span>Apr 14, 2015</span><span>Commercial Property Executive</span></div>
-            </a>
-          </Article>
-
-          <Article>
-            <a target="_blank" rel="noreferrer noopener" href="https://communitynewspapers.com/biscayne-bay/cgi-merchant-group-breaks-ground-at-1100-biscayne/">
-            <h2>CGI Merchant Group Breaks Ground at 1100 Biscayne</h2>
-            <div><span>Mar 14, 2015</span><span>Brickell</span></div>
             </a>
           </Article>
         </Grid>

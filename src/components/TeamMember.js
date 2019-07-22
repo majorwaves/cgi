@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { device } from '../utils/devices'
 
 const Person = styled.div`
   border-bottom: 1px dashed rgba(0,0,0,0.12);
@@ -41,9 +42,12 @@ const Extra = styled.div`
   font-size: 13px;
   padding: 1rem;
   line-height: 1.5em;
-  display: grid;
-  grid-template-columns: 1fr 8fr;
-  grid-gap: 2rem;
+
+  @media ${device.laptop}{
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    grid-gap: 2rem;
+  }
 
   h3 {
     font-size: 18px;
@@ -62,7 +66,13 @@ const Extra = styled.div`
   }
 
   img {
-    width: 100%;
+    width: 25vw;
+    margin-bottom: 1rem;
+
+    @media ${device.laptop}{
+      width: 100%;
+      margin: 0;
+    }
   }
 `;
 

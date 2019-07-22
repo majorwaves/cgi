@@ -6,6 +6,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import TheFirm from './pages/TheFirm'
+import Portfolio from './pages/Portfolio'
 import Media from './pages/Media'
 import Foundation from './pages/Foundation'
 import Team from './pages/Team'
@@ -17,8 +18,7 @@ import './App.css'
 const theme = {
   type: {
     body: `'Montserrat', Helvetica, Arial, sans-serif`,
-    heading: `'Playfair Display', Times, Georgia, serif`,
-
+    heading: `'Book Antiqua', Times, Georgia, serif`,
   },
   color: {
     light: 'rgb(0,150,219)',
@@ -50,6 +50,7 @@ class App extends Component {
               <Route path='/the-firm' component={TheFirm} />
               <Route path='/media' component={Media} />
               <Route path='/contact' component={Contact} />
+              <Route path='/portfolio' component={Portfolio} />
               <Route path='/foundation' component={Foundation} />
               <Route path='/social-impact' component={SocialImpact} />
               <Route exact path='/team' component={Team} />

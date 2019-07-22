@@ -46,6 +46,14 @@ const ListItem = styled.li`
     display: block;
     padding: .25rem 1rem;
     background: ${props => props.active ? props.theme.color.medium : 'transparent'};
+
+    &:hover {
+      background: ${props => props.theme.color.medium};
+
+      &:after {
+        display: none;
+      }
+    }
   }
 
   &:after {
@@ -100,6 +108,10 @@ const SubListItem = styled.li`
 
     &:hover {
       background: ${props => props.theme.color.medium};
+
+      &:after {
+        display: none;
+      }
     }
   }
 `;

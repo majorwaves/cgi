@@ -4,20 +4,14 @@ import image3 from './images/headshots/Rodolfo Slaibi.jpg';
 import image4 from './images/headshots/Danielle Milota.jpg';
 import image5 from './images/headshots/Mike Lambie.jpg';
 import image6 from './images/headshots/Juan Yepes.jpg';
-import image7 from './images/headshots/Jonathon Pavlov.jpg';
-import image8 from './images/headshots/Fernanda Roso.jpg';
 import image9 from './images/headshots/Allyssa Munro.jpg';
 import image10 from './images/headshots/Christian Arrabal.jpg';
-import image11 from './images/headshots/Maria Ruiz.jpg';
 import image12 from './images/headshots/Ileana Rabassa.jpg';
-import image13 from './images/headshots/Rafeal Baez.jpg';
-import image14 from './images/headshots/Luis Sanchez.jpg';
-import image15 from './images/headshots/Isabela Salas.jpg';
 
 const data = {
   "Raoul Thomas": {
     "name": "Raoul Thomas",
-    "title": "Founder & Chief Executive Officer",
+    "title": "Chief Executive Officer",
     "image": image1,
     "unit": "Executive Committee",
     "excerpt":"Raoul Thomas has utilized his knowledge and experiences to build CGI Merchant Group into a successful investment management and financial advisory firm.",
@@ -38,18 +32,11 @@ const data = {
     ]
   },
   "Rodolfo Slaibi": {
-    "name": "Rodolfo Sailbi",
+    "name": "Rodolfo Slaibi",
     "image": image3,
     "title": "Chief Financial Officer",
     "unit": "Executive Committee",
     "bio": "Rodolfo Slaibi, CPA, has extensive experience in a wide range of leadership, management and advisory positions. In the role of Chief Financial Officer, he provides executives with timely and accurate financial statements, cash management, oversight over accounting and finance operations, as well as design and maintenance of the financial reporting structures. Proficient in general management, business principles and essential business practices, he has advised companies representing several industries including real estate and hospitality, financial services, retail and manufacturing and communications and technology. His success as an advisor to business is built on a foundation of considerable leadership and management experience obtained during his long tenure in public accounting including several years with Big Four and top tier accounting firms."
-  },
-  "Danielle M. Milota": {
-    "name": "Danielle M. Milota",
-    "image": image4,
-    "title": "Senior Vice President, Head of Capital Markets and Investor Relations",
-    "unit": "Executive Committee",
-    "bio": " Danielle is an accomplished professional with a track record of driving strong business results. Prior to joining CGI, Mrs. Milota was Director of Fixed Income at Credit Suisse Securities (USA) LLC in New York. Danielle was responsible for U.S. Asset Backed Commercial Paper Origination and Head of Short-Term Investor Marketing. During her 13- year tenure at Credit Suisse, Danielle covered financial issuer clients and over 200 institutional investors.  In addition, she sourced and facilitated accessing short term liquidity for the bank.  Prior to her role at Credit Suisse, Ms. Milota was an Associate Producer at the New York Stock Exchange for CNN and CNN Financial News."
   },
   "Michael Lambie": {
     "name": "Michael Lambie",
@@ -58,65 +45,36 @@ const data = {
     "unit": "Executive Committee",
     "bio": "Mr. Lambie brings to CGI over 30 years of experience of project management and over 10 years in asset management. He currently manages over 400+ square feet of assets in the South Florida area and has successfully driven all assets to full occupancy. His areas of expertise include resource and risk management, as well as process security and improvement. Mr. Lambie was previously the District Corporate Retail Manager for Walgreens, where he was responsible for working with key stakeholders and overseeing all aspects of the district store’s operations. Mr. Lambie holds a Bachelor of Science in Business Management and Marketing from Kennesaw State University."
   },
-  "Juan Yepes": {
-    "name": "Juan Yepes",
-    "image": image6,
-    "title": "Assistant Vice President, Asset Management",
-    "unit": "Executive Offices",
-  },
-  "Jonathon Pavlov": {
-    "name": "Jonathon Pavlov",
-    "image": image7,
-    "title": "Management Associate",
-    "unit": "Executive Offices"
-  },
-  "Fernanda Roso": {
-    "name": "Fernanda Roso",
-    "image": image8,
-    "title": "Assistant Vice President, Asset Management",
-    "unit": "Executive Offices",
-  },
-  "Allyssa Munro": {
-    "name": "Allyssa Munro",
-    "image": image9,
-    "title": "Vice President, Marketing and PR",
-    "unit": "Executive Offices",
+  "Danielle M. Milota": {
+    "name": "Danielle M. Milota",
+    "image": image4,
+    "title": "Senior Vice President, Head of Capital Markets and Investor Relations",
+    "unit": "Executive Committee",
+    "bio": " Danielle is an accomplished professional with a track record of driving strong business results. Prior to joining CGI, Mrs. Milota was Director of Fixed Income at Credit Suisse Securities (USA) LLC in New York. Danielle was responsible for U.S. Asset Backed Commercial Paper Origination and Head of Short-Term Investor Marketing. During her 13- year tenure at Credit Suisse, Danielle covered financial issuer clients and over 200 institutional investors.  In addition, she sourced and facilitated accessing short term liquidity for the bank.  Prior to her role at Credit Suisse, Ms. Milota was an Associate Producer at the New York Stock Exchange for CNN and CNN Financial News."
   },
   "Christian Arrabal": {
     "name": "Christian Arrabal",
     "image": image10,
-    "title": "Finance and Investments Manager",
-    "unit": "Executive Offices",
+    "title": "Manager",
+    "unit": "Finance and Investments",
   },
-  "Maria Ruiz": {
-    "name": "Maria Ruiz",
-    "image": image11,
-    "title": "Executive Assistant",
-    "unit": "Executive Offices",
+  "Allyssa Munro": {
+    "name": "Allyssa Munro",
+    "image": image9,
+    "title": "Vice President",
+    "unit": "Marketing and PR",
+  },
+  "Juan Yepes": {
+    "name": "Juan Yepes",
+    "image": image6,
+    "title": "Assistant Vice President",
+    "unit": "Asset Management",
   },
   "Ileana Rabassa": {
     "name": "Ileana Rabassa",
     "image": image12,
     "title": "Financial Controller",
-    "unit": "Executive Offices",
-  },
-  "Rafael Baez": {
-    "name": "Rafael Baez",
-    "image": image13,
-    "title": "Manager, Accounting ",
-    "unit": "Executive Offices",
-  },
-  "Luis Sanchez": {
-    "name": "Luis Sanchez",
-    "image": image14,
-    "title": "Analyst, Special Projects",
-    "unit": "Executive Offices",
-  },
-  "Isabella Salas": {
-    "name": "Isabella Salas",
-    "image": image15,
-    "title": "Special Projects",
-    "unit": "Executive Offices",
+    "unit": "Accounting",
   }
 }
 

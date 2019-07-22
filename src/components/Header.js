@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import logo from '../images/logo.png'
+import logo from '../images/logo-white.png'
+import logoDark from '../images/logo.png'
 import Menu from './Nav'
 import { Link } from 'react-router-dom'
 import Social from './Social'
@@ -14,19 +15,20 @@ const Head = styled.header`
   grid-template-columns: 1fr 6fr;
   grid-gap: 4rem;
   padding: 0 5vw;
-  z-index: 5;
+  z-index: 50;
   box-sizing: border-box;
-  background: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
+  background: white;
   width: 100vw;
 
   @media ${device.laptop}{
     position: relative;
     width: auto;
+    background: transparent;
   }
 `;
 
@@ -85,12 +87,12 @@ class Header extends Component {
     console.log(this.props.match.path)
 
     return (
-      <Head>
-        <Link to='/'><Logo><img src={logo} alt='logo' /></Logo></Link>
+      <Head dark={this.props.location.pathname === '/contact'}>
+        <Link to='/'><Logo><img src={this.props.location.pathname === '/contact' || !isBrowser ? logoDark : logo} alt='logo' /></Logo></Link>
         {isBrowser
           ?
             <>
-              <Menu />
+              <Menu dark={this.props.location.pathname === '/contact'} />
               <Social />
             </>
           :

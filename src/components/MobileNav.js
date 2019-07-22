@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 import navMarker from '../images/nav-marker.svg'
-import Search from './Search'
 
 const Menu = styled.div`
   height: auto;
@@ -92,14 +91,12 @@ class MobileNav extends Component {
     return (
       <Menu open={this.props.open}>
         <Nav onClick={this.props.handleClick}>
-          <Item className='has-subnav'>
-            <NavLink to='/the-firm'>The Firm</NavLink>
-          </Item>
+          <Item><NavLink to='/the-firm'>The Firm</NavLink></Item>
+          <Item><NavLink to='/portfolio'>Portfolio</NavLink></Item>
           <Item><NavLink to='/team'>Team</NavLink></Item>
           <Item><NavLink to='/social-impact'>Social Impact</NavLink></Item>
           <Item><NavLink to='/media'>Media</NavLink></Item>
           <Item><NavLink to ='/contact'>Contact</NavLink></Item>
-          <Item><Search toggleOpen={this.handleSearchOpen} /></Item>
         </Nav>
       </Menu>
     );

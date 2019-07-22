@@ -4,23 +4,39 @@ import Button from './Button'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { device } from '../utils/devices'
+import ReactPlayer from 'react-player'
 
 const Wrapper = styled.section`
   position: relative;
   background: black;
   overflow: hidden;
-  min-height: 360px;
+  height: 60vh;
   background: url(${props => props.bg});
-  background-position: ${props => props.top ? 'top' : 'center 800px'};
+  background-position: ${props => props.top ? 'top' : 'center'};
   background-size: cover;
+  text-shadow: 0px 0px 20px rgba(0,0,0,0.5);
 
   @media ${device.laptop}{
-    min-height: 500px;
+    min-height: 700px;
+    height: 80vh;
     background-attachment: fixed;
+    margin-top: -92px;
   }
 
   a {
     text-decoration: none;
+  }
+
+  .player {
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &:after {
@@ -32,17 +48,7 @@ const Wrapper = styled.section`
     height: 100%;
     background: ${props => props.theme.color.medium};
     z-index: 1;
-    opacity: .5;
-
-    @supports (mix-blend-mode: multiply) {
-      mix-blend-mode: hard-light;
-      opacity: 1;
-    }
-
-    @media ${device.laptop}{
-      mix-blend-mode: multiply;
-    }
-  }
+    opacity: .2;
 `;
 
 const Content = styled.div`
@@ -59,6 +65,7 @@ const Content = styled.div`
 
   @media ${device.laptop}{
     width: 50vw;
+    min-width: 900px;
   }
 `;
 
@@ -80,6 +87,16 @@ const Hero = ({ video, image, title, subtitle, gradient, buttonText, top}) => (
       <Title gradient={gradient}>{title}</Title>
       <Link to='/the-firm'><Button light>{buttonText}</Button></Link>
     </Content>
+    {video &&
+      <ReactPlayer
+        className='player'
+        url={video}
+        playing
+        playsInline
+        muted
+        loop
+      />
+    }
   </Wrapper>
 );
 
