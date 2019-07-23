@@ -21,7 +21,7 @@ const Sidebar = styled.div`
   background: ${props => props.theme.color.medium};
   color: white;
   will-change: transform;
-  transform: ${props => props.open ? 'translate(-10vw, 0)' : 'translate(0,0)' };
+  transform: ${props => props.open ? 'translate(-10vw, 0) translateZ(0)' : 'none' };
   z-index: 2;
   width: 5vw;
   transition: 1s all ease-in-out;
@@ -33,7 +33,7 @@ const Sidebar = styled.div`
 
   @media ${device.laptop}{
     right: -5vw;
-    transform: ${props => props.open ? 'translate(-5vw, 0)' : 'translate(0,0)' };
+    transform: ${props => props.open ? 'translate(-5vw, 0) translateZ(0)' : 'none' };
   }
 
   div {
@@ -97,7 +97,7 @@ const Asset = styled.div`
   @media ${device.laptop}{
     height: 25vw;
 
-    &:nth-of-type(4n-1), &:nth-of-type(4n){
+    &:nth-of-type(4), &:nth-of-type(5) {
       flex-direction: row-reverse;
 
       ${Side}{
@@ -151,6 +151,7 @@ const Logo = styled.div`
 
   img {
     width: 100%;
+    transform: translateZ(0);
   }
 `;
 
@@ -163,7 +164,8 @@ const Info = styled.div`
   transition: .2s all ease-in-out;
   opacity: ${props => props.open ? '1' : '0' };
   transition-delay: 1s;
-  transform: ${props => props.open ? 'translate(0,0)' : 'translate(0,1rem)' };
+  will-change: transform;
+  transform: ${props => props.open ? 'none' : 'translate(0,1rem)' };
 
   @media ${device.laptop}{
     padding: 1rem;
@@ -189,6 +191,7 @@ const Image = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transform: translateZ(0);
   }
 `;
 

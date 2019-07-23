@@ -11,8 +11,8 @@ const Wrapper = styled.button`
   font-family: ${props => props.theme.type.body};
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  background: transparent;
-  color: ${props => props.light ? 'white' : props.theme.color.light };
+  background: ${props => props.light ? 'white' : 'transparent' };
+  color: ${props => props.light ? props.theme.color.medium : props.theme.color.light };
   border: ${props => props.light ? `1px solid white` : `1px solid ${props.theme.color.light}` };
   cursor: pointer;
   transition: 0.2s all ease-in-out;

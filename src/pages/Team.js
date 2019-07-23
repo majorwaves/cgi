@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import PageHeader from '../components/PageHeader'
 import TeamMember from '../components/TeamMember'
-import image from '../images/firm-neu.jpg'
+import image from '../images/team--alt.jpg'
 import data from '../leadershipData.js'
 
 const Wrapper = styled.div`
@@ -60,7 +60,9 @@ class Team extends Component {
       <Wrapper>
         <PageHeader
           image={image}
-          title='Our Team'
+          darken={25}
+          bw
+          title='Executive Team'
         />
         <Table>
           <TableHead>

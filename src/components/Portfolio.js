@@ -7,6 +7,8 @@ import gabriel from '../images/logo-gabriel.png'
 import gabrielImage from '../images/bakare_0378.jpg'
 import miracle from '../images/logo-miracle.png'
 import miracleImage from '../images/miracle.jpg'
+import biltmore from '../images/logo-biltmore.png'
+import biltmoreImage from '../images/biltmore.jpg'
 import { device } from '../utils/devices'
 
 const Grid = styled.section`
@@ -19,29 +21,31 @@ const Grid = styled.section`
   }
 `;
 
-const Intro = styled.div`
-  background: ${props => props.theme.color.dark};
-  color: white;
-  font-size: 18px;
-  display: flex;
-  padding: 2rem;
-  justify-content: center;
-  flex-direction: column;
-
-  @media ${device.laptop}{
-    padding: 6rem;
-  }
-
-  h2 {
-    font-family: ${props => props.theme.type.heading};
-    font-size: 36px;
-    font-weight: normal;
-  }
-
-  p {
-    line-height: 1.6em;
-  }
-`;
+// const Intro = styled.div`
+//   background: ${props => props.theme.color.dark};
+//   color: white;
+//   font-size: 18px;
+//   grid-column: span 2;
+//   display: flex;
+//   padding: 2rem;
+//   justify-content: center;
+//   flex-direction: column;
+//
+//   @media ${device.laptop}{
+//     padding: 6rem;
+//     padding-top: 12rem;
+//   }
+//
+//   h2 {
+//     font-family: ${props => props.theme.type.heading};
+//     font-size: 36px;
+//     font-weight: normal;
+//   }
+//
+//   p {
+//     line-height: 1.6em;
+//   }
+// `;
 
 class Portfolio extends Component {
 
@@ -57,10 +61,6 @@ class Portfolio extends Component {
   render(){
     return (
       <Grid id="portfolio">
-        <Intro>
-          <h2>Our Portfolio</h2>
-          <p>CGI Merchant Group aims to make investments on a value basis with a goal of maximizing return on capital. CGI uses ingenuity to enhance cash flows, reduce risk and lower the cost of capital.</p>
-        </Intro>
         <PortfolioItem
           id='nexus'
           open={this.state.selected === 'nexus'}
@@ -89,6 +89,15 @@ class Portfolio extends Component {
           logo={miracle}
           image={miracleImage}
           title='55 Miracle Mile'
+        />
+        <PortfolioItem
+          id='biltmore'
+          info='550 Biltmore consists of a Class A office building totaling 162,293 rentable square feet located in Miami’s prestigious Coral Gables submarket. This architecturally distinctive, 16-story pyramid-shaped office property with coveted podium parking features unparalleled finishes including Italian travertine walls with marble and granite accent features and burled walnut elevator cabs. The building is home to some of the most reputable companies, including UBS, Richemont, Heinemann Americas, Cartier, and Miami Plastic Surgery Institute.'
+          open={this.state.selected === 'biltmore'}
+          handleClick={this.handleClick}
+          logo={biltmore}
+          image={biltmoreImage}
+          title='550 Biltmore'
         />
       </Grid>
     )

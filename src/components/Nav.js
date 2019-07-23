@@ -1,22 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
-import Modal from 'react-modal'
-import SubNav from './SubNav'
 import navMarker from '../images/nav-marker.svg'
-
-const customStyles = {
-  content : {
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)',
-    zIndex                : '10',
-    cursor                : 'auto'
-  }
-};
 
 const Menu = styled.nav`
   color: ${props => props.theme.color.medium};
@@ -24,6 +9,7 @@ const Menu = styled.nav`
   display: flex;
   align-items: center;
   height: calc(60px + 2rem);
+  z-index: 10;
 
   .nav {
     padding: 0;
@@ -34,7 +20,7 @@ const Menu = styled.nav`
     align-items: center;
     justify-content: space-between;
     position: relative;
-    width: 40vw;
+    width: 50vw;
     min-width: 440px;
   }
 `;
@@ -65,16 +51,28 @@ const Item = styled.li`
     cursor: pointer;
 
     &:hover {
-      color: ${props => props.theme.color.light};
+      border-bottom: 2px solid white;
+      /* color: ${props => props.theme.color.light}; */
     }
   }
 
   a {
-    color: ${props => props.theme.color.medium};
+    color: ${props => props.dark ? props.theme.color.medium : 'white'};
+    text-shadow: ${props => props.dark ? `none` : `0px 0px 30px rgba(0,0,0,0.6);`};
     text-decoration: none;
+    transition: 0.2s padding ease-in-out;
+    position: relative;
 
     &:hover {
-      color: ${props => props.theme.color.light};
+      &:after {
+        height: 2px;
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        background: ${props => props.dark ? props.theme.color.medium : 'white'};
+        width: 100%;
+        left: 0;
+      }
     }
   }
 
@@ -100,42 +98,40 @@ class Nav extends Component {
 
   render() {
 
-    const firmNav = [
-      {
-        title: 'About Us',
-        url: '/the-firm',
-        text: "CGI Merchant Group is a private-equity, alternative investment management firm.",
-        items: [
-          {
-            title: 'Overview',
-            url: '/the-firm',
-            text: 'CGI Merchant Group is a private-equity, alternative investment management firm.'
-          },
-          {
-            title: 'Investment Philosopy',
-            url: '/the-firm#philosophy',
-            text: 'CGI Merchant Group is a private-equity, alternative investment management firm.'
-          },
-          {
-            title: 'Portfolio',
-            url: '/the-firm#portfolio',
-            text: 'CGI Merchant Group is a private-equity, alternative investment management firm.'
-          }
-        ]
-      }
-    ]
+    // const firmNav = [
+    //   {
+    //     title: 'About Us',
+    //     url: '/the-firm',
+    //     text: "CGI Merchant Group is a private-equity, alternative investment management firm.",
+    //     items: [
+    //       {
+    //         title: 'Overview',
+    //         url: '/the-firm',
+    //         text: 'CGI Merchant Group is a private-equity, alternative investment management firm.'
+    //       },
+    //       {
+    //         title: 'Investment Philosopy',
+    //         url: '/the-firm#philosophy',
+    //         text: 'CGI Merchant Group is a private-equity, alternative investment management firm.'
+    //       },
+    //       {
+    //         title: 'Portfolio',
+    //         url: '/the-firm#portfolio',
+    //         text: 'CGI Merchant Group is a private-equity, alternative investment management firm.'
+    //       }
+    //     ]
+    //   }
+    // ]
 
     return (
-      <Menu open={this.props.open}>
+      <Menu {...this.props}>
         <ul className='nav main'>
-          <Item className='has-subnav'>
-            <NavLink to='/the-firm'>The Firm</NavLink>
-            <SubNav items={firmNav} />
-          </Item>
-          <Item><NavLink to='/team'>Team</NavLink></Item>
-          <Item><NavLink to='/social-impact'>Social Impact</NavLink></Item>
-          <Item><NavLink to='/media'>Media</NavLink></Item>
-          <Item><NavLink to='/contact'>Contact</NavLink></Item>
+          <Item {...this.props}><NavLink to='/the-firm'>The Firm</NavLink></Item>
+          <Item {...this.props}><NavLink to='/portfolio'>Portfolio</NavLink></Item>
+          <Item {...this.props}><NavLink to='/team'>Team</NavLink></Item>
+          <Item {...this.props}><NavLink to='/social-impact'>Social Impact</NavLink></Item>
+          <Item {...this.props}><NavLink to='/media'>Media</NavLink></Item>
+          <Item {...this.props}><NavLink to='/contact'>Contact</NavLink></Item>
         </ul>
       </Menu>
     );

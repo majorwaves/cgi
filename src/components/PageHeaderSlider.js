@@ -14,6 +14,7 @@ const Hero = styled.div`
   height: 300px;
   position: relative;
   background: black;
+  margin-top: -92px;
 
   @media ${device.laptop}{
     height: 600px;
