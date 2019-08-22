@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import PageHeader from '../components/PageHeader'
-import image from '../images/portfolio.png'
+import image from '../images/portfolio-beta.jpg'
 import { device } from '../utils/devices'
 import Portfolio from '../components/Portfolio'
 import Helmet from 'react-helmet'
@@ -45,7 +45,6 @@ class PortfolioPage extends Component {
           `}</script>
         </Helmet>
         <PageHeader
-          unpadded
           title='Our Portfolio'
           html={
               <>
