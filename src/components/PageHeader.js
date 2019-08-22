@@ -4,7 +4,7 @@ import { device } from '../utils/devices'
 
 const Hero = styled.div`
   position: relative;
-  height: ${props => props.unpadded ? `800px` : `300px` };
+  height: ${props => props.unpadded ? `800px` : `400px` };
 
   @media ${device.laptop}{
     height: 300px;
@@ -38,7 +38,6 @@ const Overlay = styled.div`
   left: 5vw;
   width: 90vw;
   z-index: 5;
-  top: 2rem;
 
   @media ${device.laptop}{
     width: ${props => props.unpadded ? `90vw` : `auto` };
@@ -46,7 +45,7 @@ const Overlay = styled.div`
   }
 
   h1 {
-    font-size: 30px;
+    font-size: 24px;
     font-family: ${props => props.theme.type.heading};
     padding: ${props => props.unpadded ? `0 0 1rem` : `1rem`};
     background: ${props => props.unpadded ? 'none' : `rgba(0,0,0,0.6)` };
