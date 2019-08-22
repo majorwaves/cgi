@@ -97,7 +97,7 @@ const Asset = styled.div`
   @media ${device.laptop}{
     height: 25vw;
 
-    &:nth-of-type(4), &:nth-of-type(5) {
+    &:nth-of-type(3), &:nth-of-type(4) {
       flex-direction: row-reverse;
 
       ${Side}{
