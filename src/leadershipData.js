@@ -67,7 +67,7 @@ const data = {
   "Juan Yepes": {
     "name": "Juan Yepes",
     "image": image6,
-    "title": "Assistant Vice President",
+    "title": "Vice President",
     "unit": "Asset Management",
   },
   "Ileana Rabassa": {

@@ -263,18 +263,14 @@ class TheFirm extends Component {
         />
         <Intro>
           <div>
-            <p><strong>CGI Merchant Group (“CGI”)</strong> is a private equity, alternative investment management firm that focuses on real estate value-added investment opportunities in the U.S.</p>
-            <p>Through strategic management and effective financing, CGI increases the value of its commercial real estate.</p>
-            <p>CGI transforms its holdings into Class A, fully-operational assets.</p>
-            <p>The Firm has a wealth of knowledge on capital markets – which combined with ingenuity and experience – distinguishes it from other alternative investment managers.</p>
+            <p><strong>CGI Merchant Group (“CGI”)</strong> is a private equity, alternative investment management firm that focuses on real estate value-added investment opportunities in the U.S. Through strategic management and effective financing, CGI increases the value of its commercial real estate. CGI transforms its holdings into Class A, fully-operational assets. The Firm has a wealth of knowledge on capital markets – which combined with ingenuity and experience – distinguishes it from other alternative investment managers.</p>
           </div>
         </Intro>
         <Section id='philosophy'>
           <div>
             <h4>Contrarian Views</h4>
             <h1>Investment Philosophy</h1>
-            <p>At CGI, our focus is to remain nimble, execution-minded and in a position to create value.</p>
-            <p>The Firm relies on strategic alliances, operating partnerships and third-party consultants to remain agile, while preserving scalability.</p>
+            <p>At CGI, our focus is to remain nimble, execution-minded and in a position to create value. The Firm relies on strategic alliances, operating partnerships and third-party consultants to remain agile, while preserving scalability.</p>
             <p>CGI implements best-industry practices and engages in hands-on asset management techniques to ensure all investment portfolios and inherent risks are optimally managed.</p>
           </div>
           <div>
