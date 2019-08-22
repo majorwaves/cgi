@@ -5,6 +5,8 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { device } from '../utils/devices'
 import ReactPlayer from 'react-player'
+import { isBrowser } from 'react-device-detect'
+import bg from '../images/home.jpg'
 
 const Wrapper = styled.section`
   position: relative;
@@ -15,6 +17,12 @@ const Wrapper = styled.section`
   background-position: ${props => props.top ? 'top' : 'center'};
   background-size: cover;
   text-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
   @media ${device.laptop}{
     min-height: 700px;
@@ -87,15 +95,17 @@ const Hero = ({ video, image, title, subtitle, gradient, buttonText, top}) => (
       <Title gradient={gradient}>{title}</Title>
       <Link to='/the-firm'><Button light>{buttonText}</Button></Link>
     </Content>
-    {video &&
+    {isBrowser
+      ?
       <ReactPlayer
         className='player'
         url={video}
         playing
-        playsInline
+        playsinline
         muted
         loop
       />
+      : <img src={bg} alt='home page' />
     }
   </Wrapper>
 );
