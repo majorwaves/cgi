@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import PageHeader from '../components/PageHeader'
-import image from '../images/biscayne.jpg'
+import image from '../images/firm-beta.jpg'
 import { device } from '../utils/devices'
 import ReactPlayer from 'react-player'
 import Modal from 'react-modal'
