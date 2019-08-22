@@ -46,6 +46,7 @@ class PortfolioPage extends Component {
         </Helmet>
         <PageHeader
           title='Our Portfolio'
+          darken={10}
           html={
               <>
                 <p>Over $300 million institutional quality, Class A, U.S. commercial real estate assets.</p>
