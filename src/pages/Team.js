@@ -4,6 +4,7 @@ import PageHeader from '../components/PageHeader'
 import TeamMember from '../components/TeamMember'
 import image from '../images/team--alt.jpg'
 import data from '../leadershipData.js'
+import Helmet from 'react-helmet'
 
 const Wrapper = styled.div`
   border-top: 1px solid rgba(0,0,0,0.12);
@@ -58,6 +59,7 @@ class Team extends Component {
   render(){
     return (
       <Wrapper>
+        <Helmet title='CGI | Team' />
         <PageHeader
           image={image}
           darken={25}

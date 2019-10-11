@@ -229,7 +229,7 @@ class TheFirm extends Component {
   render(){
     return (
       <Wrapper>
-        <Helmet title='CGI | Social Impact'>
+        <Helmet title='CGI | The Firm'>
           <meta property="og:title" content="CGI | The Firm" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="http://cgiimg.com/the-firm" />

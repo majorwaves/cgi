@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Hero from '../components/Hero'
-// import Asset from '../components/Asset'
-// import fund from '../images/fund-img.jpg'
-// import sma from '../images/sma-min.jpg'
-// import home from '../images/home-alt.jpg'
-// import { device } from '../utils/devices'
+import Helmet from 'react-helmet'
 import video from '../images/AdobeStock_269638480.mov'
 
 const Main = styled.main`
@@ -33,13 +29,14 @@ const Main = styled.main`
 class Home extends Component {
   render() {
     return (
-          <Main>
-            <Hero
-              title={<>CGI Merchant Group is a<br/>real-estate focused, private-equity,<br/>alternative investment management firm.</>}
-              buttonText='Read More'
-              video={video}
-            />
-          </Main>
+    <Main>
+      <Helmet title='CGI | Home' />
+      <Hero
+        title={<>CGI Merchant Group is a<br/>real-estate focused, private-equity,<br/>alternative investment management firm.</>}
+        buttonText='Read More'
+        video={video}
+      />
+    </Main>
     );
   }
 }

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import PageHeader from '../components/PageHeader'
 import image from '../images/foundation-2.jpg'
 import { device } from '../utils/devices'
+import Helmet from 'react-helmet'
 
 const Wrapper = styled.div`
 
@@ -169,6 +170,7 @@ class SocialImpact extends Component {
   render(){
     return (
       <Wrapper>
+        <Helmet title='CGI | Social Impact' />
         <PageHeader
           image={image}
           title='Social Impact'

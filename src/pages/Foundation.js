@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import PageHeaderSlider from '../components/PageHeaderSlider'
 import image from '../images/foundation-1.jpg'
@@ -42,6 +43,7 @@ class Foundation extends Component {
   render() {
     return (
       <Wrapper>
+        <Helmet title='CGI | Foundation' />
         <PageHeaderSlider
           image={image}
           secondImage={image2}
