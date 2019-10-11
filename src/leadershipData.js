@@ -4,7 +4,6 @@ import image3 from './images/headshots/Rodolfo Slaibi.jpg';
 import image4 from './images/headshots/Danielle Milota.jpg';
 import image5 from './images/headshots/Mike Lambie.jpg';
 import image6 from './images/headshots/Juan Yepes.jpg';
-import image9 from './images/headshots/Allyssa Munro.jpg';
 import image10 from './images/headshots/Christian Arrabal.jpg';
 import image12 from './images/headshots/Ileana Rabassa.jpg';
 
@@ -20,8 +19,8 @@ const data = {
       "On behalf of CGI, Thomas oversees investment and asset management activities centered on a group of strategies that are currently undertaken through principal investments, which the firm invests alongside its limited partners and has fiduciary discretion as investment manager."
     ]
   },
-  "Mike Keilty": {
-    "name": "Mike Keilty",
+  "Michael Keilty": {
+    "name": "Michael Keilty",
     "title": "Executive Vice Chairman",
     "unit": "Executive Committee",
     "image": image2,
@@ -41,7 +40,7 @@ const data = {
   "Michael Lambie": {
     "name": "Michael Lambie",
     "image": image5,
-    "title": "Vice President, Asset Management",
+    "title": "Group Vice President, Asset Management",
     "unit": "Executive Committee",
     "bio": "Mr. Lambie brings to CGI over 30 years of experience of project management and over 10 years in asset management. He currently manages over 400+ square feet of assets in the South Florida area and has successfully driven all assets to full occupancy. His areas of expertise include resource and risk management, as well as process security and improvement. Mr. Lambie was previously the District Corporate Retail Manager for Walgreens, where he was responsible for working with key stakeholders and overseeing all aspects of the district store’s operations. Mr. Lambie holds a Bachelor of Science in Business Management and Marketing from Kennesaw State University."
   },
@@ -57,12 +56,6 @@ const data = {
     "image": image10,
     "title": "Manager",
     "unit": "Finance and Investments",
-  },
-  "Allyssa Munro": {
-    "name": "Allyssa Munro",
-    "image": image9,
-    "title": "Vice President",
-    "unit": "Marketing and PR",
   },
   "Juan Yepes": {
     "name": "Juan Yepes",
