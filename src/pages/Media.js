@@ -1,9 +1,10 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import PageHeader from '../components/PageHeader'
 import image from '../images/media-alt.jpg'
 import { device } from '../utils/devices'
 import Helmet from 'react-helmet'
+import Button from '../components/Button'
 
 const Wrapper = styled.div`
 `;
@@ -20,6 +21,11 @@ const Grid = styled.div`
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
     padding: 4rem;
+  }
+
+  button {
+    margin: 2rem auto;
+    grid-column: span 3;
   }
 `;
 
@@ -58,7 +64,7 @@ const Article = styled.div`
     padding: 2rem;
     margin: 0;
     border-bottom: 1px solid rgba(0,0,0,0.12);
-    min-height: 190px;
+    min-height: 220px;
     box-sizing: border-box;
     color: ${props => props.theme.color.dark};
   }
@@ -76,105 +82,136 @@ const Article = styled.div`
   }
 `;
 
-class Media extends Component {
+const Media = () => {
 
-  render() {
-    return (
-      <Wrapper>
-        <Helmet title='CGI | Media' />
-        <PageHeader
-          image={image}
-          title='Media'
-        />
-        <Grid>
+  const [expanded, setExpanded] = useState(false);
 
-          <Article>
-            <a target="_blank" rel="noreferrer noopener" href="https://www.cpexecutive.com/post/exploring-south-floridas-flexible-office-sector/">
-            <h2>Exploring South Florida’s Flexible Office Sector</h2>
-            <div><span>August 7, 2019</span><span>Commercial Property Executive</span></div>
-            </a>
-          </Article>
+  return (
+    <Wrapper>
+      <Helmet title='CGI | Media' />
+      <PageHeader
+        image={image}
+        title='Media'
+      />
+      <Grid>
 
-          <Article>
-            <a target="_blank" rel="noreferrer noopener" href="https://www.bizjournals.com/southflorida/potmsearch/detail/submission/6472419/Juan_Yepes">
-            <h2>CGI Merchant Group LLC (CGI) Promotes Juan Yepes to vice President of Asset Management</h2>
-            <div><span>August 7, 2019</span><span>South Florida Business Journal</span></div>
-            </a>
-          </Article>
+        <Article>
+          <a target="_blank" rel="noreferrer noopener" href="https://www.bizjournals.com/southflorida/potmsearch/detail/submission/6474472/Alicia_Rivero">
+          <h2>CGI Merchant Group LLC (CGI) Names Alicia Rivero as Chief Administrative Officer</h2>
+          <div><span>September 24, 2019</span><span>South Florida Business Journal</span></div>
+          </a>
+        </Article>
 
-          <Article>
-            <a target="_blank" rel="noreferrer noopener" href="https://www.blackenterprise.com/real-estate-investment-firm-founder-honored-for-major-miami-hotel-deal/">
-            <h2>Real Estate Investment Firm Founder Honored for Major Miami Hotel Deal</h2>
-            <div><span>August 5, 2019</span><span>Black Enterprise</span></div>
-            </a>
-          </Article>
+        <Article>
+          <a target="_blank" rel="noreferrer noopener" href="https://www.bizjournals.com/southflorida/news/2019/09/16/sfbj-reveals-2019-structures-awards-finalists.html?iana=hpmvp_sflo_news_headline#g/459763/48">
+          <h2>South Florida Business Journal Deal of the Year Award Finalist for The Gabriel Miami and The Nexus Workspaces</h2>
+          <div><span>September 16, 2019</span><span>South Florida Business Journal</span></div>
+          </a>
+        </Article>
 
-          <Article>
-            <a target="_blank" rel="noreferrer noopener" href="https://newsroom.hilton.com/curio/news/nabhood-honors-the-gabriel-miami-and-cgi-merchant-group-ceo">
-            <h2>Founder & CEO of CGI Merchant Group, Raoul Thomas and The Gabriel Miami Receive Deal of The Year Award by National Association of Black Hotel Owners, Operators and Developers</h2>
-            <div><span>August 1, 2019</span><span>Hilton</span></div>
-            </a>
-          </Article>
+        <Article>
+          <a target="_blank" rel="noreferrer noopener" href="https://southflorida.citybizlist.com/article/570313/cgi-merchant-group-welcomes-roman-jones-new-restaurant-in-coral-gables">
+          <h2>CGI Merchant Group Welcomes Roman Jones’ New Restaurant in Coral Gables</h2>
+          <div><span>September 9, 2019</span><span>South Florida City Biz List</span></div>
+          </a>
+        </Article>
 
-          <Article>
-            <a target="_blank" rel="noreferrer noopener" href="https://www.bizjournals.com/southflorida/potmsearch/detail/submission/6468322/Danielle_Milota">
-            <h2>CGI Merchant Group LLC (CGI) Names Danielle Milota as Senior Vice  President, Head of Capital Markets and Investor Relations</h2>
-            <div><span>May 8, 2019</span><span>South Florida Business Journal</span></div>
-            </a>
-          </Article>
+        <Article>
+          <a target="_blank" rel="noreferrer noopener" href="https://www.cpexecutive.com/post/exploring-south-floridas-flexible-office-sector/">
+          <h2>CGI Merchant Group’s Raoul Thomas Discusses What Makes The Area’s Coworking Sector Thrive</h2>
+          <div><span>August 7, 2019</span><span>Commercial Property Executive</span></div>
+          </a>
+        </Article>
 
-          <Article>
-            <a target="_blank" rel="noreferrer noopener" href="https://therealdeal.com/miami/2019/04/24/this-co-working-company-opened-two-offices-in-palm-beach-county/">
-            <h2>This co-working company opened two offices in Palm Beach County</h2>
-            <div><span>April 24, 2019</span><span>The Real Deal</span></div>
-            </a>
-          </Article>
+        <Article>
+          <a target="_blank" rel="noreferrer noopener" href="https://www.bizjournals.com/southflorida/potmsearch/detail/submission/6472419/Juan_Yepes">
+          <h2>CGI Merchant Group LLC (CGI) Promotes Juan Yepes to Vice President of Asset Management</h2>
+          <div><span>August 7, 2019</span><span>South Florida Business Journal</span></div>
+          </a>
+        </Article>
 
-          <Article>
-            <a target="_blank" rel="noreferrer noopener" href="https://www.businesswire.com/news/home/20180725005140/en/CGI-Successfully-Completes-Refinancing-Class-A-Properties-South">
-            <h2>CGI Successfully Completes Refinancing of Four Class-A Properties in South Florida</h2>
-            <div><span>July 25, 2018</span><span>Business Wire</span></div>
-            </a>
-          </Article>
+        <Article>
+          <a target="_blank" rel="noreferrer noopener" href="https://www.blackenterprise.com/real-estate-investment-firm-founder-honored-for-major-miami-hotel-deal/">
+          <h2>Real Estate Investment Firm Founder Honored for Major Miami Hotel Deal</h2>
+          <div><span>August 5, 2019</span><span>Black Enterprise</span></div>
+          </a>
+        </Article>
 
-          <Article>
-            <a target="_blank" rel="noreferrer noopener" href="https://therealdeal.com/miami/tag/cgi-merchant-group/">
-            <h2>Photos: On the scene at ribbon cutting of 55 Miracle Mile</h2>
-            <div><span>Jun 30, 2015</span><span>The Real Deal, South FL Real Estate News</span></div>
-            </a>
-          </Article>
+        <Article>
+          <a target="_blank" rel="noreferrer noopener" href="https://newsroom.hilton.com/curio/news/nabhood-honors-the-gabriel-miami-and-cgi-merchant-group-ceo">
+          <h2>Founder & CEO of CGI Merchant Group, Raoul Thomas and The Gabriel Miami Receive Deal of The Year Award by National Association of Black Hotel Owners, Operators and Developers</h2>
+          <div><span>August 1, 2019</span><span>Hilton</span></div>
+          </a>
+        </Article>
 
-          <Article>
-            <a target="_blank" rel="noreferrer noopener" href="https://www.law.com/dailybusinessreview/almID/1202729582207/Whats-Driving-CGI-Merchant-Group-Investments-in-South-Florida-Real-Estate/?slreturn=20190227102204">
-            <h2>What's Driving CGI Merchant Group Investment is South FL Real Estate?</h2>
-            <div><span>Jun 16, 2015</span><span>DBR Daily Business Review</span></div>
-            </a>
-          </Article>
-          <Article>
-            <a target="_blank" rel="noreferrer noopener" href="https://www.bizjournals.com/southflorida/print-edition/2015/05/22/raoul-thomas-on-finding-value-where-others-can-t.html">
-            <h2>Raoul Thomas on finding value where others can’t</h2>
-            <div><span>May 22, 2015</span><span>South Florida Business Journal</span></div>
-            </a>
-          </Article>
+        <Article>
+          <a target="_blank" rel="noreferrer noopener" href="https://www.bizjournals.com/southflorida/potmsearch/detail/submission/6468322/Danielle_Milota">
+          <h2>CGI Merchant Group LLC (CGI) Names Danielle Milota as Senior Vice  President, Head of Capital Markets and Investor Relations</h2>
+          <div><span>May 8, 2019</span><span>South Florida Business Journal</span></div>
+          </a>
+        </Article>
 
-          <Article>
-            <a target="_blank" rel="noreferrer noopener" href="https://www.cpexecutive.com/post/executive-spotlight-raoul-thomas-cgi-merchant-group/">
-            <h2>Executive Spotlight: Raoul Thomas, CGI Merchant Group</h2>
-            <div><span>Apr 14, 2015</span><span>Commercial Property Executive</span></div>
-            </a>
-          </Article>
+        <Article>
+          <a target="_blank" rel="noreferrer noopener" href="https://therealdeal.com/miami/2019/04/24/this-co-working-company-opened-two-offices-in-palm-beach-county/">
+          <h2>This co-working company opened two offices in Palm Beach County</h2>
+          <div><span>April 24, 2019</span><span>The Real Deal</span></div>
+          </a>
+        </Article>
+        {expanded
+          ?
+            <>
+              <Article>
+                <a target="_blank" rel="noreferrer noopener" href="https://www.businesswire.com/news/home/20180725005140/en/CGI-Successfully-Completes-Refinancing-Class-A-Properties-South">
+                <h2>CGI Successfully Completes Refinancing of Four Class-A Properties in South Florida</h2>
+                <div><span>July 25, 2018</span><span>Business Wire</span></div>
+                </a>
+              </Article>
 
-          <Article>
-            <a target="_blank" rel="noreferrer noopener" href="https://communitynewspapers.com/biscayne-bay/cgi-merchant-group-breaks-ground-at-1100-biscayne/">
-            <h2>CGI Merchant Group Breaks Ground at 1100 Biscayne</h2>
-            <div><span>Mar 14, 2015</span><span>Brickell</span></div>
-            </a>
-          </Article>
-        </Grid>
-      </Wrapper>
-    );
-  }
+              <Article>
+                <a target="_blank" rel="noreferrer noopener" href="https://therealdeal.com/miami/tag/cgi-merchant-group/">
+                <h2>Photos: On the scene at ribbon cutting of 55 Miracle Mile</h2>
+                <div><span>Jun 30, 2015</span><span>The Real Deal, South FL Real Estate News</span></div>
+                </a>
+              </Article>
 
+              <Article>
+                <a target="_blank" rel="noreferrer noopener" href="https://www.law.com/dailybusinessreview/almID/1202729582207/Whats-Driving-CGI-Merchant-Group-Investments-in-South-Florida-Real-Estate/?slreturn=20190227102204">
+                <h2>What's Driving CGI Merchant Group Investment is South FL Real Estate?</h2>
+                <div><span>Jun 16, 2015</span><span>DBR Daily Business Review</span></div>
+                </a>
+              </Article>
+              <Article>
+                <a target="_blank" rel="noreferrer noopener" href="https://www.bizjournals.com/southflorida/print-edition/2015/05/22/raoul-thomas-on-finding-value-where-others-can-t.html">
+                <h2>Raoul Thomas on finding value where others can’t</h2>
+                <div><span>May 22, 2015</span><span>South Florida Business Journal</span></div>
+                </a>
+              </Article>
+
+              <Article>
+                <a target="_blank" rel="noreferrer noopener" href="https://www.cpexecutive.com/post/executive-spotlight-raoul-thomas-cgi-merchant-group/">
+                <h2>Executive Spotlight: Raoul Thomas, CGI Merchant Group</h2>
+                <div><span>Apr 14, 2015</span><span>Commercial Property Executive</span></div>
+                </a>
+              </Article>
+
+              <Article>
+                <a target="_blank" rel="noreferrer noopener" href="https://communitynewspapers.com/biscayne-bay/cgi-merchant-group-breaks-ground-at-1100-biscayne/">
+                <h2>CGI Merchant Group Breaks Ground at 1100 Biscayne</h2>
+                <div><span>Mar 14, 2015</span><span>Brickell</span></div>
+                </a>
+              </Article>
+            </>
+          :
+          <Button
+            large
+            onClick={() => setExpanded(true)}
+          >
+            Archived Media
+          </Button>
+      }
+      </Grid>
+    </Wrapper>
+  )
 }
 
 export default Media;
